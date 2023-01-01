@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App ahihi"/>
+    <div class="div">
+      <div class="row">
+        <div class="col-sm-2"><DishCard></DishCard></div>
+        <div class="col-sm-2"><DishCard></DishCard></div>
+        <div class="col-sm-2"><CardDish></CardDish></div>
+        <div class="col-sm-2"><CardDish></CardDish></div>
+        <div class="col-sm-2"><CardDish></CardDish></div>
+        <div class="col-sm-2"><CardDish></CardDish></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DishCard from './components/DishCard.vue';
+import CardDish from './components/CardDish.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DishCard,
+    CardDish
   }
 }
 </script>
