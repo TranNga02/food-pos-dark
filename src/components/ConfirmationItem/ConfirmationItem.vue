@@ -5,10 +5,10 @@
                 <div class="card">
                     <div class="row g-0">
                         <div class="col-md-2 align-self-center">
-                            <img src="../assets/Image/noodles.png" class="img-fluid rounded-start" alt="..." />
+                            <img src="../../assets/Image/noodles.png" class="img-fluid rounded-start" alt="..." />
                         </div>
                         <div class="col-md-10 align-self-center">
-                            <div class="text-start px-2">
+                            <div class="text-start px-3">
                                 <h5 class="card-title name">Spicy seasoned s...</h5>
                                 <p class="card-text price">$ {{ dishInfo.price }}</p>
                             </div>
@@ -45,6 +45,6 @@
   </script>
   <style lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
-  @import url("../styles/confirmation-item.scss");
+  @import url("./style.scss");
   </style>
   

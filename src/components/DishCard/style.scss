@@ -1,0 +1,31 @@
+.dish-card img{
+    transform: translateY(-40%);
+    width: 80%;
+} 
+.dish-card .content{
+    margin-top: -25%;
+}
+.dish-card .card{
+    border-radius: 16px !important;
+    background-color: #1F1D2B !important;
+}
+.dish-card .name{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+} 
+.dish-card .price, .available-product{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}
+.dish-card .price{
+    color: #FFFFFF;
+}
+.dish-card .available-product{
+    color: #ABBBC2;
+}
+.card-hidden{
+    height: 20%;
+}

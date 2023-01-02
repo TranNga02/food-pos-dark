@@ -14,7 +14,6 @@
         <div class="col-sm-4">
           <MostOrdered v-bind:dishInfo=dishInfo></MostOrdered>
         </div>
-        <!-- <div class="col-sm-2"></div> -->
         <div class="col-sm-2">
           <OrderStatus v-bind:dishStatus="'preparing'"></OrderStatus>
         </div>
@@ -30,7 +29,9 @@
         <div class="col-sm-4">
           <ConfirmationItem v-bind:dishInfo=dishInfo></ConfirmationItem>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <OrderTab></OrderTab>
+        </div>
         <div class="col-sm-4"></div>
       </div>
 
@@ -39,13 +40,14 @@
 </template>
 
 <script>
-import DishCard from './components/DishCard.vue';
-import CardDish from './components/CardDish.vue';
-import SummaryCard from './components/SummaryCard.vue';
-import MostOrdered from './components/MostOrdered.vue';
-import OrderStatus from './components/OrderStatus.vue';
-import OrderReportRow from './components/OrderReportRow.vue';
-import ConfirmationItem from './components/ConfirmationItem.vue'
+import DishCard from './components/DishCard/DishCard.vue';
+import CardDish from './components/CardDish/CardDish.vue';
+import SummaryCard from './components/SummaryCard/SummaryCard.vue';
+import MostOrdered from './components/MostOrdered/MostOrdered.vue';
+import OrderStatus from './components/OrderStatus/OrderStatus.vue';
+import OrderReportRow from './components/OrderReportRow/OrderReportRow.vue';
+import ConfirmationItem from './components/ConfirmationItem/ConfirmationItem.vue';
+import OrderTab from './components/Tab/OrderTab.vue';
 export default {
   name: 'app',
   data() {
@@ -89,7 +91,8 @@ export default {
     MostOrdered,
     OrderStatus,
     OrderReportRow,
-    ConfirmationItem
+    ConfirmationItem,
+    OrderTab
   }
 }
 </script>
@@ -103,4 +106,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+@import url('./styles/body.scss');
 </style>
