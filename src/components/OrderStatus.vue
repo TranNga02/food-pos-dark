@@ -1,11 +1,9 @@
 <template>
     <div class="order-status">
-      <div class="card">
-        <div class="status d-flex align-items-center flex-column p-2">
-          <div v-if = "dishStatus == 'completed'" class="completed px-3 py-2 m-2">Completed</div>
-          <div v-else-if = "dishStatus == 'preparing'" class="preparing px-3 py-2 m-2">Preparing</div>
-          <div v-else class="pending px-3 py-2 m-2">Pending</div>
-        </div>
+        <div class="status align-items-center p-2">
+          <div v-if = "dishStatus == 'completed'" class="completed px-3 py-2 m-2 text-center">Completed</div>
+          <div v-else-if = "dishStatus == 'preparing'" class="preparing px-3 py-2 m-2 text-center">Preparing</div>
+          <div v-else class="pending px-3 py-2 m-2 text-center">Pending</div>
       </div>
     </div>
 </template>
