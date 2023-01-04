@@ -25,7 +25,7 @@
         </div>
         <div class="col-sm-6"></div>
       </div>
-      <div class="row">
+      <div class="row my-2">
         <div class="col-sm-4">
           <ConfirmationItem v-bind:dishInfo=dishInfo></ConfirmationItem>
         </div>
@@ -47,7 +47,7 @@ import MostOrdered from './components/MostOrdered/MostOrdered.vue';
 import OrderStatus from './components/OrderStatus/OrderStatus.vue';
 import OrderReportRow from './components/OrderReportRow/OrderReportRow.vue';
 import ConfirmationItem from './components/ConfirmationItem/ConfirmationItem.vue';
-import OrderTab from './components/Tab/OrderTab.vue';
+import OrderTab from './components/OrderTab/OrderTab.vue';
 export default {
   name: 'app',
   data() {
@@ -102,9 +102,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 @import url('./styles/body.scss');
 </style>

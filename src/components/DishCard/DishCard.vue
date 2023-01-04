@@ -1,6 +1,6 @@
 <template>
-    <div class="dish-card">
-        <div class="card">
+    <div class="dish-card mt-5">
+        <div class="card text-center">
             <div class="card-body">
                 <img src="../../assets/Image/noodles.png" alt="">
                 <div class="content px-3">
