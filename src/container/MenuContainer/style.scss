@@ -26,5 +26,10 @@ hr{
 }
 .nav-type .active a{
     color: #EA7C69!important;
-    box-shadow: 0;
+    box-shadow: 0px 0px !important;
+}
+.nav-type a:hover{
+    color: #EA7C69!important;
+    background-color: transparent !important;
+    box-shadow: 0px 0px !important;
 }
