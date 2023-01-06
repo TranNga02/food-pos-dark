@@ -1,3 +1,30 @@
+#card-dish{
+    img{
+        width: 70%;
+    }
+    .card-footer{
+        background-color: rgb(234,124,105,0.24);
+        color:  #EA7C69;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+    }
+    .card{
+        border-radius: 8px !important;
+        background-color: #1F1D2B !important;
+    }
+    .name{
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+    } 
+    .price,.available-product{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
 #card-dish img{
     width: 70%;
 }
