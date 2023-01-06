@@ -1,14 +1,7 @@
 <template>
-  <div id="app" class="container-fluid">
-    <div class="row">
-        <div class="col-sm-auto sticky-top p-0 d-flex align-items-stretch">
-          <SideBar></SideBar>
-          <!-- <BarSide></BarSide> -->
-        </div>
-        <div class="col-sm p-3 min-vh-100">
-            <!-- content -->
-        </div>
-    </div>
+  <div id="app">
+    <HomePage></HomePage>
+    <!-- <MenuContent></MenuContent> -->
     <!-- <div class="div">
       
       <div class="row my-2">
@@ -44,13 +37,13 @@
         <div class="col-sm-4">
           <OrderTab></OrderTab>
         </div>
-      </div> -->
+      </div>
 
       
         
       
-    </div>
-  <!-- </div> -->
+    </div> -->
+  </div>
 </template>
 
 <script>
@@ -61,7 +54,9 @@
 // import OrderReportRow from './components/OrderReportRow/OrderReportRow.vue';
 // import ConfirmationItem from './components/ConfirmationItem/ConfirmationItem.vue';
 // import OrderTab from './components/OrderTab/OrderTab.vue';
-import SideBar from './components/SideBar/SideBar.vue';
+// import SideBar from './components/SideBar/SideBar.vue';
+import HomePage from './container/HomePage/HomePage.vue';
+// import MenuContent from './container/MenuContent/MenuContent.vue';
 export default {
   name: 'app',
   data() {
@@ -106,8 +101,10 @@ export default {
     // OrderReportRow,
     // ConfirmationItem,
     // OrderTab,
-    SideBar
-  }
+    // SideBar,
+    HomePage,
+    // MenuContent
+}
 }
 </script>
 
