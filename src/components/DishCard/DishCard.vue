@@ -2,7 +2,7 @@
     <div class="dish-card mt-5">
         <div class="card text-center">
             <div class="card-body">
-                <img src="../../assets/Image/noodles.png" alt="">
+                <img :src="require(`../../assets/Image/${dishInfo.image}`)" alt="">
                 <div class="content px-3">
                     <h5 class="card-title name">{{ dishInfo.name }}</h5>
                     <p class="card-text price">$ {{ dishInfo.price }}</p>

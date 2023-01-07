@@ -1,36 +1,16 @@
 <template>
     <div class="menu-content">
-        <div class="row">
-            <div class="col-sm-4">
-                <DishCard v-bind:dishInfo="dishInfo"></DishCard>
-            </div>
-            <div class="col-sm-4">
-                <DishCard v-bind:dishInfo="dishInfo"></DishCard>
-            </div>
-            <div class="col-sm-4">
-                <DishCard v-bind:dishInfo="dishInfo"></DishCard>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-4" v-for="(dish,index) in dishInfo" v-bind:key="index">
+                    <DishCard v-bind:dishInfo="dish"></DishCard>
+                </div>
             </div>
         </div>
     </div>
 </template>
-<script>
-import DishCard from '../../components/DishCard/DishCard.vue';
-export default{
-    name: 'menu-content',
-    data(){
-        return {
-            dishInfo: {
-                image: "@/assets/Image/noodles.png",
-                name: "Spicy seasoned seafood noodles",
-                price: 2.29,
-                quantity: 20,
-                ordered: 200
-            },
-        }
-    },
-    components:{
-        DishCard
-    }
-}
+<script src="./MenuContent.js">
 </script>
-<style></style>
+<style lang="scss">
+@import url(./style.scss);
+</style>

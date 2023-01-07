@@ -1,9 +1,9 @@
 <template>
     <div class="dark-layout">
         <div class="row m-0">
-            <div class="col-sm-auto sticky-top p-0 d-flex align-items-stretch">
+            <aside class="col-sm-auto min-vh-100 sticky-top p-0 d-flex align-items-stretch">
                 <SideBarContainer></SideBarContainer>
-            </div>
+            </aside>
             <div class="col-sm p-3 min-vh-100">
                 <slot></slot>
             </div>
