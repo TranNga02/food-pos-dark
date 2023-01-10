@@ -30,4 +30,5 @@
 </template>
 
 <script lang="ts" src="./MenuContainer.ts"></script>
+
 <style scoped lang="scss" src="./style.scss"></style>

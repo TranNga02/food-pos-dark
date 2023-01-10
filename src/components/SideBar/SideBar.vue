@@ -21,6 +21,7 @@
     </v-list-item>
   </v-navigation-drawer>
 </template>
+
 <script lang="ts" src="./SideBar.ts"></script>
 
 <style lang="scss" src="./style.scss"></style>

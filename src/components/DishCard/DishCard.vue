@@ -15,4 +15,5 @@
 </template>
 
 <script lang="ts" src="./DishCard.ts"></script>
+
 <style scoped lang="scss" src="./style.scss"></style>

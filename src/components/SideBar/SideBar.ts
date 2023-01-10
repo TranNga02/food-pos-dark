@@ -1,5 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Icon from '@/components/Icon';
+
 @Component({
   components: { Icon },
 })

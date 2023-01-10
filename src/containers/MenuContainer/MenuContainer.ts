@@ -1,5 +1,6 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import Button from '@/components/Button';
+
 @Component({
   components: { Button },
 })
