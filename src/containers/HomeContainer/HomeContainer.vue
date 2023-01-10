@@ -1,7 +1,8 @@
+import SideBar from '@/components/SideBar/SideBar';
+
 <template>
   <div class="home-page">
-    <p class="test">Home Page</p>
-    <Button label="Button" />
+    <SideBar></SideBar>
   </div>
 </template>
 
