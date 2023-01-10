@@ -1,4 +1,3 @@
-<!-- eslint-disable prettier/prettier -->
 <template>
   <v-navigation-drawer class="side-bar">
     <v-list-item class="item">

@@ -1,0 +1,40 @@
+@import url('../../styles/body.scss');
+.image {
+  width: 70%;
+  margin: auto;
+  transform: translateY(-20%);
+}
+.card {
+  text-align: center;
+  background: #1f1d2b;
+  border-radius: 16px;
+
+  .name {
+    width: 58%;
+    margin: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #ffffff;
+    padding: 10px !important;
+  }
+  .price {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    padding-bottom: 5px;
+  }
+  .available-product {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #abbbc2;
+  }
+  .card-info {
+    transform: translateY(-20%);
+  }
+}
+.space {
+  height: 80px;
+}

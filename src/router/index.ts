@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 
 const HomePage = () => import('@/pages/HomePage.vue');
-
+const Button = () => import('@/components/Button');
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
