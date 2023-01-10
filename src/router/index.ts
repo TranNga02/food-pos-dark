@@ -10,6 +10,13 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: HomePage,
+    children: [
+      {
+        path: '/discount',
+        name: 'Discount',
+        component: Button,
+      },
+    ],
   },
 ];
 

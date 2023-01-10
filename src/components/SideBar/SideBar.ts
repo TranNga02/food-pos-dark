@@ -9,21 +9,27 @@ export default class SideBar extends Vue {
   readonly items: any = [
     {
       icon: 'home',
+      path: '',
     },
     {
       icon: 'discount',
+      path: 'discount',
     },
     {
       icon: 'dashboard',
+      path: 'dashboard',
     },
     {
       icon: 'message',
+      path: 'message',
     },
     {
       icon: 'notification',
+      path: 'notification',
     },
     {
       icon: 'setting',
+      path: 'setting',
     },
   ];
 }
