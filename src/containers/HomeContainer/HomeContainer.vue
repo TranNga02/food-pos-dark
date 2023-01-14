@@ -1,7 +1,6 @@
 <template>
   <div class="home-page">
-    <p class="test">Home Page</p>
-    <Button label="Button" />
+    <SideBar></SideBar>
   </div>
 </template>
 

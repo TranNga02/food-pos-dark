@@ -1,0 +1,55 @@
+.side-bar {
+  height: 100%;
+  position: fixed;
+  width: 90px !important;
+  background-color: #1f1d2b !important;
+  align-items: center;
+  justify-content: center;
+
+  .item {
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    .icon-button {
+      margin: 10px 0;
+      border-radius: 8px;
+      padding: 11px;
+
+      &:hover {
+        background: #ea7c69;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+
+        .icon::before {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .icon-button.logo {
+      background-color: rgb(235, 150, 106, 0.26);
+      padding: 3px;
+    }
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .icon-Logo {
+    font-size: 40px;
+  }
+
+  .router-link-exact-active {
+    .icon-button {
+      background: #ea7c69;
+      box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+
+      .icon::before {
+        color: #ffffff;
+      }
+    }
+  }
+}
