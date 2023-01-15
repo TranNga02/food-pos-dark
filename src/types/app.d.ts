@@ -23,3 +23,8 @@ declare namespace App {
 
   export type RequestCallback = (token: string) => Promise<void>;
 }
+
+export type SideBarItem = {
+  icon: string;
+  path: string;
+};

@@ -1,31 +1,34 @@
-import { Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
+import { SideBarItem } from '@/types/app';
+import FontIcon from '../FontIcon';
 
+@Component({
+  components: { FontIcon },
+})
 export default class SideBar extends Vue {
-  readonly logo: string = 'icon-Logo';
-  readonly logOut: string = 'icon-Log-Out';
-  readonly items: any = [
+  readonly items: SideBarItem[] = [
     {
-      icon: 'icon-Home',
+      icon: 'icon-home',
       path: '/',
     },
     {
-      icon: 'icon-Discount',
+      icon: 'icon-discount',
       path: '/discount',
     },
     {
-      icon: 'icon-Dashboard',
+      icon: 'icon-dashboard',
       path: '/dashboard',
     },
     {
-      icon: 'icon-Message',
+      icon: 'icon-message',
       path: '/message',
     },
     {
-      icon: 'icon-Notification',
+      icon: 'icon-notification',
       path: '/notification',
     },
     {
-      icon: 'icon-Setting',
+      icon: 'icon-setting',
       path: '/setting',
     },
   ];

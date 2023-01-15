@@ -3,11 +3,12 @@
   position: fixed;
   width: 90px !important;
   background-color: #1f1d2b !important;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 
   .item {
     justify-content: center;
+    position: relative;
 
     a {
       text-decoration: none;
@@ -28,28 +29,73 @@
       }
     }
 
-    .icon-button.logo {
+    .logo {
       background-color: rgb(235, 150, 106, 0.26);
       padding: 3px;
+      margin: 10px 0;
+      border-radius: 8px;
     }
-  }
-
-  .icon {
-    font-size: 24px;
-  }
-
-  .icon-Logo {
-    font-size: 40px;
   }
 
   .router-link-exact-active {
     .icon-button {
       background: #ea7c69;
       box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+      position: relative;
 
       .icon::before {
         color: #ffffff;
       }
+    }
+  }
+
+  .item:has(> a.router-link-exact-active) {
+    background: #252836;
+    border-radius: 12px 0px 0px 12px;
+    padding-left: 6px;
+    margin-left: 10px;
+
+    .icon-button::before {
+      content: '';
+      position: absolute;
+      right: -22px;
+      top: -30px;
+      background-color: #1f1d2b;
+      height: 20px;
+      width: 20px;
+      border-radius: 0px 0px 12px 0px;
+    }
+
+    .icon-button::after {
+      content: '';
+      position: absolute;
+      right: -22px;
+      bottom: -30px;
+      background-color: #1f1d2b;
+      height: 20px !important;
+      width: 20px;
+      border-radius: 0px 12px 0px 0px;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      top: -10px;
+      height: 10px;
+      width: 10px;
+      background-color: #252836;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0px;
+      bottom: -10px;
+      height: 10px;
+      width: 10px;
+      background-color: #252836;
     }
   }
 }
