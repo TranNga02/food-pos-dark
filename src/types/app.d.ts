@@ -22,9 +22,9 @@ declare namespace App {
   export type MessageError = ResponseError['errors'];
 
   export type RequestCallback = (token: string) => Promise<void>;
-}
 
-export type SideBarItem = {
-  icon: string;
-  path: string;
-};
+  type SideBarItem = {
+    icon: string;
+    path: string;
+  };
+}

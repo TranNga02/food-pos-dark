@@ -1,5 +1,5 @@
 <template>
-  <v-icon :color="color" :size="size"> {{ name }}</v-icon>
+  <span :class="classNames" :style="style"></span>
 </template>
 
 <script lang="ts" src="./FontIcon.ts"></script>
