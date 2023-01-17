@@ -1,0 +1,49 @@
+.side-bar {
+  height: 100%;
+  position: fixed;
+  align-items: stretch;
+  justify-content: center;
+
+  .item {
+    justify-content: center;
+    position: relative;
+
+    a {
+      text-decoration: none;
+    }
+
+    .icon-button {
+      margin: 10px 0;
+      border-radius: 8px;
+      padding: 11px;
+
+      &:hover {
+        background: #ea7c69;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+
+        .icon::before {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .logo {
+      background-color: rgb(235, 150, 106, 0.26);
+      padding: 3px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+  }
+
+  .router-link-exact-active {
+    .icon-button {
+      background: #ea7c69;
+      box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+      position: relative;
+
+      .icon::before {
+        color: #ffffff;
+      }
+    }
+  }
+}
