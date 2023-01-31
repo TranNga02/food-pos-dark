@@ -12,6 +12,7 @@ export default class Button extends Vue {
   @Prop({ default: false }) readonly plain: boolean;
   @Prop({ required: false }) readonly color: string;
   @Prop({ required: false }) readonly icon: string;
+  @Prop({ required: false }) iconColor: string;
   @Prop({
     default: ButtonType.BUTTON,
     validator(value: ButtonType) {
@@ -35,5 +36,9 @@ export default class Button extends Vue {
 
   get classNames(): string {
     return `btn ${this.className}`;
+  }
+
+  setIconColor(): void {
+    if (this.color == 'primary') this.iconColor = '#fafafa';
   }
 }

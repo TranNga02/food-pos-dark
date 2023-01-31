@@ -1,5 +1,3 @@
-import FontIcon from '../FontIcon';
-
 <template>
   <v-btn
     :class="classNames"
@@ -12,7 +10,7 @@ import FontIcon from '../FontIcon';
     height="48px"
     min-width="fit-content"
   >
-    <FontIcon v-if="icon !== undefined" :name="icon" :size="20" />
+    <FontIcon v-if="icon" :name="icon" :color="setIconColor" :size="20" />
     {{ label }}
   </v-btn>
 </template>
