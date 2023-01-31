@@ -1,6 +1,6 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { ButtonType } from '@/enums/app';
-import FontIcon from '../FontIcon';
+import FontIcon from '@/components/FontIcon';
 
 @Component({
   components: { FontIcon },

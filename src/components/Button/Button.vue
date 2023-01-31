@@ -11,8 +11,10 @@ import FontIcon from '../FontIcon';
     :plain="plain"
     height="48px"
     min-width="fit-content"
-    ><FontIcon :name="icon" :size="20" />{{ label }}</v-btn
   >
+    <FontIcon v-if="icon !== undefined" :name="icon" :size="20" />
+    {{ label }}
+  </v-btn>
 </template>
 
 <script lang="ts" src="./Button.ts"></script>
