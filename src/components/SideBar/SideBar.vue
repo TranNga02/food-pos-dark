@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="side-bar" :width="90" color="#1f1d2b">
+  <v-navigation-drawer class="side-bar" :width="90" color="#1f1d2b" permanent>
     <v-list-item class="item">
       <v-list-item-icon class="logo">
         <FontIcon name="logo" :size="40" />

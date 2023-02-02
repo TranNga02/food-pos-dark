@@ -1,11 +1,18 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { ButtonType } from '@/enums/app';
+import FontIcon from '@/components/FontIcon';
 
-@Component({})
+@Component({
+  components: { FontIcon },
+})
 export default class Button extends Vue {
-  @Prop({ required: true }) readonly label: string;
+  @Prop({ required: false }) readonly label: string;
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
+  @Prop({ default: false }) readonly plain: boolean;
+  @Prop({ required: false }) readonly variant: string;
+  @Prop({ required: false }) readonly icon: string;
+  @Prop({ default: '#EA7C69' }) readonly iconColor: string;
   @Prop({
     default: ButtonType.BUTTON,
     validator(value: ButtonType) {
