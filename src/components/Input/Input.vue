@@ -11,7 +11,7 @@
     solo
   >
     <template v-slot:prepend-inner>
-      <FontIcon v-if="icon" name="mask" color="#FFFFFF" :size="20" />
+      <FontIcon v-if="icon" name="search" color="#FFFFFF" :size="20" />
     </template>
   </v-text-field>
 </template>
