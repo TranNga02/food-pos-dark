@@ -1,14 +1,14 @@
 <template>
   <div class="home-page">
     <!-- <SideBar /> -->
-    <Button label="Confirm Payment" color="primary" plain />
-    <Button color="primary" icon="trash" />
-    <Button label="Confirm Payment" color="primary" icon="trash" />
-    <Button label="Cancel" className="default" />
-    <Button color="default" icon="trash" />
-    <Button label="Confirm Payment" color="default" icon="trash" />
-    <Button icon="trash" color="primary" plain />
-    <Button label="Cancel" color="primary" plain />
+    <Button label="Confirm Payment" variant="primary" plain />
+    <Button variant="primary" icon="trash" iconColor="#fafafa" />
+    <Button label="Confirm Payment" variant="primary" icon="trash" iconColor="#fafafa" />
+    <Button label="Cancel" />
+    <Button icon="trash" />
+    <Button label="Confirm Payment" icon="trash" />
+    <Button icon="trash" variant="primary" plain />
+    <Button label="Cancel" variant="primary" plain />
   </div>
 </template>
 

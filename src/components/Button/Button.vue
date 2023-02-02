@@ -5,12 +5,12 @@
     :loading="loading"
     :disabled="disabled"
     @click="clickBtn"
-    :color="color"
+    :color="variant"
     :plain="plain"
     height="48px"
     min-width="fit-content"
   >
-    <FontIcon v-if="icon" :name="icon" :color="setIconColor" :size="20" />
+    <FontIcon v-if="icon" :name="icon" :color="iconColor" :size="20" />
     {{ label }}
   </v-btn>
 </template>
