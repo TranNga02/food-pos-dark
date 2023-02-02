@@ -13,7 +13,7 @@ import FontIcon from '../FontIcon';
     solo
   >
     <template v-slot:prepend-inner>
-      <FontIcon slot="prependIcon" v-if="icon" :name="icon" color="#FFFFFF" :size="20" />
+      <FontIcon v-if="icon" :name="icon" color="#FFFFFF" :size="20" />
     </template>
   </v-text-field>
 </template>
