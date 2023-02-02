@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <Input placeholder="This is placeholder" />
-    <Input placeholder="This is placeholder" icon="mask" />
+    <Input placeholder="This is placeholder" :icon="true" />
   </div>
 </template>
 

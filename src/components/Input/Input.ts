@@ -10,7 +10,7 @@ export default class Button extends Vue {
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
   @Prop({ required: false }) readonly placeholder: string;
-  @Prop({ required: false }) readonly icon: string;
+  @Prop({ default: false }) readonly icon: boolean;
   @Prop({
     default: InputType.TEXT,
     validator(value: InputType) {

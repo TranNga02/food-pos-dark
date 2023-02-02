@@ -1,5 +1,3 @@
-import FontIcon from '../FontIcon';
-
 <template>
   <v-text-field
     hide-details
@@ -13,7 +11,7 @@ import FontIcon from '../FontIcon';
     solo
   >
     <template v-slot:prepend-inner>
-      <FontIcon v-if="icon" :name="icon" color="#FFFFFF" :size="20" />
+      <FontIcon v-if="icon" name="mask" color="#FFFFFF" :size="20" />
     </template>
   </v-text-field>
 </template>
