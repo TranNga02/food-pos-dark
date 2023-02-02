@@ -24,14 +24,6 @@ export default class Button extends Vue {
       //
     },
   })
-  readonly onClick: () => void;
-
-  clickBtn(): void {
-    if (this.onClick) {
-      this.onClick();
-    }
-  }
-
   get classNames(): string {
     return `txt ${this.className}`;
   }
