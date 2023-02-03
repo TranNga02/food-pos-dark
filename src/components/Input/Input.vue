@@ -1,14 +1,17 @@
 <template>
   <v-text-field
     hide-details
-    :class="classNames"
+    persistent-placeholder
+    :solo="solo"
+    :class="`${classNames} my-3`"
     :type="type"
     :loading="loading"
     :disabled="disabled"
     :label="label"
+    :value="value"
     :placeholder="placeholder"
     background-color="#2D303E"
-    solo
+    color="#ffffff"
   >
     <template v-slot:prepend-inner>
       <FontIcon v-if="icon" name="search" color="#FFFFFF" :size="20" />
