@@ -1,11 +1,11 @@
 <template>
   <div class="home-page">
-    <Input placeholder="Order Note..." solo />
-    <Input placeholder="Order Note..." value="Please, just a little bit spicy only." solo />
-    <Input placeholder="Search for food, coffe, etc.." :icon="true" solo />
-    <Input placeholder="This is placeholder" label="Cardholder Name" value="Levi Ackerman" />
-    <Input placeholder="This is placeholder" label="CVV" value="123" type="password" />
-    <Input placeholder="This is placeholder" label="Cardholder Name" value="Levi Ackerman" />
+    <Input placeholder="Order Note..." :onChange="changeValue" solo />
+    <Input placeholder="Order Note..." :onChange="changeValue" :value="value" solo />
+    <Input placeholder="Search for food, coffe, etc.." :onChange="changeValue" icon="search" solo />
+    <Input placeholder="This is placeholder" :onChange="changeValue" label="Cardholder Name" :value="value" />
+    <Input placeholder="This is placeholder" :onChange="changeValue" label="CVV" :value="value" type="password" />
+    <Input placeholder="This is placeholder" :onChange="changeValue" label="Cardholder Name" :value="value" />
   </div>
 </template>
 

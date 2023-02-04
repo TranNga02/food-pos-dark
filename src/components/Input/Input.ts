@@ -11,7 +11,7 @@ export default class Input extends Vue {
   @Prop({ default: false }) readonly disabled: boolean;
   @Prop({ required: false }) readonly placeholder: string;
   @Prop({ required: false }) readonly value: string;
-  @Prop({ default: false }) readonly icon: boolean;
+  @Prop({ required: false }) readonly icon: string;
   @Prop({ default: false }) readonly solo: boolean;
   @Prop({
     default: InputType.TEXT,
@@ -21,8 +21,32 @@ export default class Input extends Vue {
   })
   readonly type: string;
   @Prop({}) readonly className: string;
+  @Prop({
+    default: () => {
+      //
+    },
+  })
+  readonly onChange: (newValue: string) => void;
+
+  changeInput(e: Event): void {
+    if (this.onChange) {
+      this.onChange(e.toString());
+    }
+  }
+
+  inputValue: string = this.getValue();
+
+  getValue(): string {
+    if (this.value) {
+      return this.value;
+    }
+    return '';
+  }
 
   get classNames(): string {
-    return `txt ${this.className}`;
+    if (this.className) {
+      return `input ${this.className}`;
+    }
+    return 'input';
   }
 }

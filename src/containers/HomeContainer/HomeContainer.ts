@@ -6,4 +6,10 @@ import Input from '@/components/Input';
 @Component({
   components: { Button, SideBar, Input },
 })
-export default class HomeContainer extends Vue {}
+export default class HomeContainer extends Vue {
+  value = 'Levi Ackerman';
+
+  changeValue(newValue: string): void {
+    this.value = newValue;
+  }
+}
