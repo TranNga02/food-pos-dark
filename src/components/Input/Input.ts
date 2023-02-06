@@ -34,19 +34,13 @@ export default class Input extends Vue {
     }
   }
 
-  inputValue: string = this.getValue();
+  inputValue = '';
 
-  getValue(): string {
-    if (this.value) {
-      return this.value;
-    }
-    return '';
+  created(): void {
+    this.inputValue = this.value || '';
   }
 
   get classNames(): string {
-    if (this.className) {
-      return `input ${this.className}`;
-    }
-    return 'input';
+    return `base-input my-3 ${this.className || ''}`;
   }
 }

@@ -3,7 +3,7 @@
     hide-details
     persistent-placeholder
     :solo="solo"
-    :class="`${classNames} my-3`"
+    :class="classNames"
     :type="type"
     :loading="loading"
     :disabled="disabled"
