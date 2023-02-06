@@ -28,19 +28,20 @@ export default class Input extends Vue {
   })
   readonly onChange: (newValue: string) => void;
 
-  changeInput(e: Event): void {
-    if (this.onChange) {
-      this.onChange(e.toString());
-    }
-  }
-
   inputValue = '';
+
+  get classNames(): string {
+    return `base-input ${this.className || ''}`;
+  }
 
   created(): void {
     this.inputValue = this.value || '';
   }
 
-  get classNames(): string {
-    return `base-input my-3 ${this.className || ''}`;
+  changeInput(value: string): void {
+    if (this.onChange) {
+      console.log(value);
+      this.onChange(value);
+    }
   }
 }
