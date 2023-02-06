@@ -35,9 +35,6 @@ export default class Button extends Vue {
   }
 
   get classNames(): string {
-    if (this.className) {
-      return `btn ${this.className}`;
-    }
-    return 'btn';
+    return `btn ${this.className || ''}`;
   }
 }
