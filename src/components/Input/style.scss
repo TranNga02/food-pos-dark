@@ -1,0 +1,29 @@
+.base-input {
+  padding-top: 30px;
+
+  input {
+    color: #e0e6e9 !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    padding-left: 14px;
+
+    &::placeholder {
+      color: #abbbc2 !important;
+    }
+  }
+
+  .v-label {
+    color: #ffffff;
+    transform: translateY(-38px);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  .v-input__slot {
+    border: 1px solid #393c49;
+    border-radius: 8px;
+    height: 48px;
+  }
+}

@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?icid9w');
-  src: url('../fonts/icomoon.eot?icid9w#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?icid9w') format('truetype'), url('../fonts/icomoon.woff?icid9w') format('woff'),
-    url('../fonts/icomoon.svg?icid9w#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?278msx');
+  src: url('../fonts/icomoon.eot?278msx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?278msx') format('truetype'), url('../fonts/icomoon.woff?278msx') format('woff'),
+    url('../fonts/icomoon.svg?278msx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,84 +25,90 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-logo:before {
-  content: '\e91a';
-}
-.icon-about-us:before {
+.icon-arrow-ios-down:before {
   content: '\e900';
+}
+.icon-search:before {
+  content: '\e913';
+}
+.icon-logo:before {
+  content: '\e91b';
+}
+.icon-coin:before {
+  content: '\e908';
 }
 .icon-add:before {
   content: '\e901';
 }
-.icon-appearance:before {
+.icon-back:before {
   content: '\e902';
 }
-.icon-arrow-down:before {
+.icon-paypal:before {
   content: '\e903';
 }
-.icon-arrow-up:before {
+.icon-about-us:before {
   content: '\e904';
 }
-.icon-back:before {
+.icon-heart:before {
   content: '\e905';
 }
-.icon-card:before {
+.icon-arrow-down:before {
   content: '\e906';
 }
-.icon-coin:before {
+.icon-arrow-up:before {
   content: '\e907';
 }
-.icon-customer:before {
-  content: '\e908';
-}
-.icon-dashboard:before {
+.icon-card:before {
   content: '\e909';
 }
-.icon-discount:before {
+.icon-customer:before {
   content: '\e90a';
 }
-.icon-edit:before {
+.icon-dashboard:before {
   content: '\e90b';
 }
-.icon-export:before {
+.icon-discount:before {
   content: '\e90c';
 }
-.icon-home:before {
+.icon-edit:before {
   content: '\e90d';
 }
-.icon-log-out:before {
+.icon-export:before {
   content: '\e90e';
 }
-.icon-message:before {
+.icon-home:before {
   content: '\e90f';
 }
-.icon-notification:before {
+.icon-log-out:before {
+  content: '\e91a';
+}
+.icon-message:before {
   content: '\e910';
 }
-.icon-option:before {
+.icon-notification:before {
   content: '\e911';
 }
-.icon-order:before {
+.icon-option:before {
   content: '\e912';
 }
-.icon-paypal:before {
-  content: '\e913';
-}
-.icon-print:before {
+.icon-order:before {
   content: '\e914';
 }
-.icon-restaurant:before {
+.icon-print:before {
   content: '\e915';
 }
-.icon-security:before {
+.icon-restaurant:before {
   content: '\e916';
 }
-.icon-setting:before {
+.icon-security:before {
   content: '\e917';
 }
-.icon-trash:before {
+.icon-setting:before {
   content: '\e918';
 }
-.icon-wallet:before {
+.icon-trash:before {
   content: '\e919';
+}
+.icon-wallet:before {
+  content: '\e91c';
 }
