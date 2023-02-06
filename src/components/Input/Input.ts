@@ -40,7 +40,6 @@ export default class Input extends Vue {
 
   changeInput(value: string): void {
     if (this.onChange) {
-      console.log(value);
       this.onChange(value);
     }
   }
