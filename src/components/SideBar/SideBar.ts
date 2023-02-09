@@ -8,7 +8,7 @@ export default class SideBar extends Vue {
   readonly items: App.SideBarItem[] = [
     {
       icon: 'home',
-      path: '/',
+      path: '/home',
     },
     {
       icon: 'discount',
