@@ -32,4 +32,16 @@ declare namespace App {
     name: string;
     value: string;
   };
+
+  type MenuBarItem = {
+    name: string;
+    path: string;
+  };
+
+  type DishInfo = {
+    src: string;
+    name: string;
+    price: number;
+    available: number;
+  };
 }

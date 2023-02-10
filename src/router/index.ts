@@ -16,6 +16,13 @@ const routes: Array<RouteConfig> = [
         path: 'home',
         name: 'Home',
         component: () => import('@/pages/HomePage.vue'),
+        children: [
+          {
+            path: 'hot-dishes',
+            name: 'Button',
+            component: () => import('@/components/Button'),
+          },
+        ],
       },
     ],
   },
