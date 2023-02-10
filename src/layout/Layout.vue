@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="dark-layout">
     <SideBar />
     <div class="content">
       <router-view />
