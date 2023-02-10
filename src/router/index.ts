@@ -1,15 +1,23 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 
-const HomePage = () => import('@/pages/HomePage.vue');
+const Layout = () => import('@/layout');
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
-    component: HomePage,
+    redirect: '/home',
+    name: 'Layout',
+    component: Layout,
+    children: [
+      {
+        path: 'home',
+        name: 'Home',
+        component: () => import('@/pages/HomePage.vue'),
+      },
+    ],
   },
 ];
 
