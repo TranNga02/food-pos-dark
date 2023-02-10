@@ -27,4 +27,9 @@ declare namespace App {
     icon: string;
     path: string;
   };
+
+  type Option = {
+    name: string;
+    value: string;
+  };
 }
