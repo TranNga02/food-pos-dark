@@ -1,8 +1,6 @@
 <template>
   <v-app id="app">
-    <component :is="$route.meta.layout">
-      <router-view />
-    </component>
+    <router-view />
   </v-app>
 </template>
 
