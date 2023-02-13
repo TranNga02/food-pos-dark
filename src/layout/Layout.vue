@@ -2,7 +2,7 @@
   <div class="dark-layout">
     <SideBar />
     <div class="content">
-      <router-view />
+      <slot />
     </div>
   </div>
 </template>
