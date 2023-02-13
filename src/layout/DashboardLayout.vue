@@ -7,6 +7,6 @@
   </div>
 </template>
 
-<script lang="ts" src="./Layout.ts"></script>
+<script lang="ts" src="./DashboardLayout.ts"></script>
 
 <style scoped lang="scss" src="./style.scss"></style>
