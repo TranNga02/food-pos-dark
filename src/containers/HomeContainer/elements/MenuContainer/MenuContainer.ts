@@ -52,7 +52,7 @@ export default class MenuContainer extends Vue {
     },
   ];
 
-  readonly listDishes: App.ListDishes = {
+  readonly listDishes: Dish.ListDishes = {
     hotDishes: [
       {
         src: 'Image 1.png',
@@ -214,7 +214,7 @@ export default class MenuContainer extends Vue {
   selectValue = '1';
   menuValue = 0;
 
-  get dishInfo(): App.DishInfo[] {
+  get dishInfo(): Dish.DishInfo[] {
     switch (this.menuValue) {
       case 0:
         return this.listDishes.hotDishes;
