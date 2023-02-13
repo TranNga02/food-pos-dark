@@ -1,6 +1,6 @@
 .menu {
   padding: 10px 30px;
-  background: #2d303e;
+  background: #252836;
   min-height: 100vh;
 
   p {
@@ -10,9 +10,9 @@
   .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
 
-    .title {
+    .header-title {
       font-weight: 600;
       font-size: 28px;
       line-height: 140%;
@@ -29,57 +29,59 @@
 
   .content {
     .navbar {
-      ul {
-        padding-left: 0px;
-        border-bottom: 1px solid #393c49;
+      margin: 20px 0px;
 
-        a {
-          text-decoration: none;
+      .bt-group {
+        background-color: transparent;
+        border-radius: 0px;
 
-          li {
-            display: inline-block;
-            padding: 0px 40px 10px 40px;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 140%;
-            color: #ffffff;
+        button {
+          text-transform: unset;
+          padding: 0px 30px 10px 0px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 140%;
+          border: 0px;
+          opacity: 1;
 
-            &:first-child {
-              padding-left: 0px;
+          &:hover {
+            color: #ea7c69 !important;
+            &::before {
+              background-color: #252836;
             }
           }
-        }
 
-        .router-link-exact-active {
-          li {
-            color: #ea7c69;
-            border-bottom: 3px solid #ea7c69;
+          &.v-btn--active {
+            color: #ea7c69 !important;
+            border-bottom: 3px solid #ea7c69 !important;
+
+            &::before {
+              background-color: #252836;
+            }
           }
         }
       }
     }
+  }
 
-    .detail {
-      margin: 10px 0px;
+  .detail {
+    .detail-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      .detail-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        p {
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 140%;
-          color: #ffffff;
-        }
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: #ffffff;
       }
+    }
 
-      .detail-content {
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-      }
+    .detail-content {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

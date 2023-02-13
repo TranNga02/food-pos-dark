@@ -2,7 +2,7 @@
   <div class="menu">
     <div class="header">
       <div>
-        <p class="title">{{ title }}</p>
+        <p class="header-title">{{ title }}</p>
         <p class="date">{{ date }}</p>
       </div>
       <div>
@@ -12,19 +12,30 @@
 
     <div class="content">
       <div class="navbar">
-        <ul>
-          <router-link v-for="item in items" :key="item.name" :to="item.path">
-            <li>{{ item.name }}</li>
-          </router-link>
-        </ul>
+        <v-btn-toggle class="bt-group" v-model="menuValue" mandatory>
+          <v-btn
+            class="btn"
+            v-for="item in menuItems"
+            :key="item.value"
+            color="white"
+            text
+            height="25px"
+            min-width="fit-content"
+            >{{ item.name }}</v-btn
+          >
+        </v-btn-toggle>
       </div>
       <div class="detail">
         <div class="detail-header">
           <div><p>Choose Dishes</p></div>
-          <div><DropDown :onChange="changeSelect" /></div>
+          <div><DropDown :items="dropdownItems" :onChange="changeSelect" /></div>
         </div>
         <div class="detail-content">
-          <router-view />
+          <v-row>
+            <v-col md="4" class="col-sm-4" v-for="(dish, index) in dishInfo" :key="index">
+              <DishCard width="250px" :dishInfo="dish"></DishCard
+            ></v-col>
+          </v-row>
         </div>
       </div>
     </div>

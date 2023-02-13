@@ -1,8 +1,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import MenuContainer from './elements/MenuContainer';
-import OrderContainer from './elements/OrderContainer';
 
 @Component({
-  components: { MenuContainer, OrderContainer },
+  components: { MenuContainer },
 })
 export default class HomeContainer extends Vue {}

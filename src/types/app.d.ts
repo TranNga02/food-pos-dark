@@ -29,13 +29,13 @@ declare namespace App {
   };
 
   type Option = {
-    name: string;
+    text: string;
     value: string;
   };
 
   type MenuBarItem = {
     name: string;
-    path: string;
+    value: number;
   };
 
   type DishInfo = {
@@ -43,5 +43,14 @@ declare namespace App {
     name: string;
     price: number;
     available: number;
+  };
+
+  type ListDishes = {
+    hotDishes: DishInfo[];
+    coldDishes: DishInfo[];
+    soup: DishInfo[];
+    grill: DishInfo[];
+    appetizer: DishInfo[];
+    dessert: DishInfo[];
   };
 }

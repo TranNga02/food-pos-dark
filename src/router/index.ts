@@ -8,23 +8,9 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    redirect: '/home',
-    name: 'Layout',
-    component: Layout,
-    children: [
-      {
-        path: 'home',
-        name: 'Home',
-        component: () => import('@/pages/HomePage.vue'),
-        children: [
-          {
-            path: 'hot-dishes',
-            name: 'Button',
-            component: () => import('@/components/Button'),
-          },
-        ],
-      },
-    ],
+    name: 'Home',
+    component: () => import('@/pages/HomePage.vue'),
+    meta: { layout: Layout },
   },
 ];
 

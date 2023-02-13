@@ -2,7 +2,7 @@
   <div class="dish-card">
     <div class="card">
       <div class="image">
-        <v-img :src="require(`@/assets/images/Image 1.png`)" width="130px"></v-img>
+        <img :src="require(`@/assets/images/${dishInfo.src}`)" width="130px" />
       </div>
       <div class="information">
         <p class="name">{{ dishInfo.name }}</p>

@@ -6,8 +6,6 @@
     :disabled="disabled"
     :label="label"
     :items="items"
-    item-text="name"
-    item-value="value"
     @change="changeSelect"
     background-color="#1f1d2b"
     solo
