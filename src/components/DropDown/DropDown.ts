@@ -8,6 +8,8 @@ export default class DropDown extends Vue {
   @Prop({ required: false }) readonly label: string;
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
+  @Prop({ default: false }) readonly value: string;
+  @Prop({ default: false }) readonly items: App.Option[];
   @Prop({}) readonly className: string;
   @Prop({
     default: () => {
@@ -16,21 +18,6 @@ export default class DropDown extends Vue {
   })
   readonly onChange: (newValue: string) => void;
 
-  readonly items: App.Option[] = [
-    {
-      name: 'Dine In',
-      value: '1',
-    },
-    {
-      name: 'To Go',
-      value: '2',
-    },
-    {
-      name: 'Delivery',
-      value: '3',
-    },
-  ];
-
   selectValue = '';
 
   get classNames(): string {
@@ -38,12 +25,11 @@ export default class DropDown extends Vue {
   }
 
   created(): void {
-    this.selectValue = this.items[0].value;
+    this.selectValue = this.value || this.items[0].value;
   }
 
   changeSelect(value: string): void {
     if (this.onChange) {
-      console.log(value);
       this.onChange(value);
     }
   }
