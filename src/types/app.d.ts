@@ -27,4 +27,14 @@ declare namespace App {
     icon: string;
     path: string;
   };
+
+  type Option = {
+    text: string;
+    value: string;
+  };
+
+  type MenuBarItem = {
+    name: string;
+    value: number;
+  };
 }

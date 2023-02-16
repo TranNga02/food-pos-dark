@@ -1,25 +1,15 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { InputType } from '@/enums/app';
 import FontIcon from '@/components/FontIcon';
 
 @Component({
   components: { FontIcon },
 })
-export default class Input extends Vue {
+export default class DropDown extends Vue {
   @Prop({ required: false }) readonly label: string;
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
-  @Prop({ required: false }) readonly placeholder: string;
   @Prop({ required: false }) readonly value: string;
-  @Prop({ required: false }) readonly icon: string;
-  @Prop({ default: false }) readonly solo: boolean;
-  @Prop({
-    default: InputType.TEXT,
-    validator(value: InputType) {
-      return [InputType.TEXT, InputType.TEXTAREA, InputType.PASSWORD].includes(value);
-    },
-  })
-  readonly type: string;
+  @Prop({ required: false }) readonly options: App.Option[];
   @Prop({}) readonly className: string;
   @Prop({
     default: () => {
@@ -28,17 +18,17 @@ export default class Input extends Vue {
   })
   readonly onChange: (newValue: string) => void;
 
-  inputValue = '';
+  selectValue = '';
 
   get classNames(): string {
-    return `base-input ${this.className || ''}`;
+    return `dropdown ${this.className || ''}`;
   }
 
   created(): void {
-    this.inputValue = this.value || '';
+    this.selectValue = this.value;
   }
 
-  changeInput(value: string): void {
+  changeSelect(value: string): void {
     if (this.onChange) {
       this.onChange(value);
     }
