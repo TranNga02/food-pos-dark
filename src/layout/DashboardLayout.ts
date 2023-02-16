@@ -4,4 +4,4 @@ import SideBar from '@/components/SideBar';
 @Component({
   components: { SideBar },
 })
-export default class Layout extends Vue {}
+export default class DashboardLayout extends Vue {}
