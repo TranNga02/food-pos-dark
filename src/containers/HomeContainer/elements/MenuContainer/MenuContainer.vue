@@ -29,7 +29,9 @@
       <div class="detail">
         <div class="detail-header">
           <div><p>Choose Dishes</p></div>
-          <div><DropDown :options="dropdownItems" label="Order Type" :onChange="changeSelect" /></div>
+          <div>
+            <DropDown :options="dropdownItems" :value="selectValue" label="Order Type" :onChange="changeSelect" />
+          </div>
         </div>
         <div class="detail-content">
           <v-row>

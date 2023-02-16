@@ -211,7 +211,7 @@ export default class MenuContainer extends Vue {
     ],
   };
 
-  selectValue = '1';
+  selectValue = '';
   menuValue = 0;
 
   get dishInfo(): Dish.DishInfo[] {

@@ -8,7 +8,7 @@ export default class DropDown extends Vue {
   @Prop({ required: false }) readonly label: string;
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
-  @Prop({ default: '' }) readonly value: string;
+  @Prop({ required: false }) readonly value: string;
   @Prop({ required: false }) readonly options: App.Option[];
   @Prop({}) readonly className: string;
   @Prop({
