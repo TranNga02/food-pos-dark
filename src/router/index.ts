@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
+
 const HomePage = () => import('@/pages/HomePage.vue');
 const Home = () => import('@/pages/home/Home.vue');
+
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [

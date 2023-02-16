@@ -11,5 +11,5 @@ import { HomeContainer } from '@/containers/HomeContainer';
     HomeContainer,
   },
 })
-export default class HomePage extends Vue {}
+export default class Home extends Vue {}
 </script>

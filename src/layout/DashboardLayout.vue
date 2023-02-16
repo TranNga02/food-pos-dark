@@ -1,5 +1,5 @@
 <template>
-  <div class="dark-layout">
+  <div class="dashboard-layout">
     <SideBar />
     <div class="content">
       <slot />
