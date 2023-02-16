@@ -1,5 +1,3 @@
-import OrderContainer from './elements/OrderContainer';
-
 <template>
   <div class="home-page">
     <v-row>
