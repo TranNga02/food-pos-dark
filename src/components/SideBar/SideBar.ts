@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import FontIcon from '../FontIcon';
+import FontIcon from '@/components/FontIcon';
 
 @Component({
   components: { FontIcon },

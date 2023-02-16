@@ -1,5 +1,5 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import FontIcon from '../FontIcon';
+import FontIcon from '@/components/FontIcon';
 
 @Component({
   components: { FontIcon },
@@ -8,8 +8,8 @@ export default class DropDown extends Vue {
   @Prop({ required: false }) readonly label: string;
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
-  @Prop({ default: false }) readonly value: string;
-  @Prop({ default: false }) readonly items: App.Option[];
+  @Prop({ default: '' }) readonly value: string;
+  @Prop({ required: false }) readonly options: App.Option[];
   @Prop({}) readonly className: string;
   @Prop({
     default: () => {
@@ -25,7 +25,7 @@ export default class DropDown extends Vue {
   }
 
   created(): void {
-    this.selectValue = this.value || this.items[0].value;
+    this.selectValue = this.value;
   }
 
   changeSelect(value: string): void {

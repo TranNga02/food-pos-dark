@@ -8,6 +8,12 @@
   width: 150px;
 }
 
+.v-select__slot {
+  .v-label {
+    color: #abbbc2;
+  }
+}
+
 .v-select__selection {
   padding-left: 10px;
   color: #ffffff;

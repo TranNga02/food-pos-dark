@@ -21,20 +21,21 @@
             text
             height="25px"
             min-width="fit-content"
-            >{{ item.name }}</v-btn
           >
+            {{ item.name }}
+          </v-btn>
         </v-btn-toggle>
       </div>
       <div class="detail">
         <div class="detail-header">
           <div><p>Choose Dishes</p></div>
-          <div><DropDown :items="dropdownItems" :onChange="changeSelect" /></div>
+          <div><DropDown :options="dropdownItems" label="Order Type" :onChange="changeSelect" /></div>
         </div>
         <div class="detail-content">
           <v-row>
             <v-col md="4" class="col-sm-4" v-for="(dish, index) in dishInfo" :key="index">
-              <DishCard width="250px" :dishInfo="dish"></DishCard
-            ></v-col>
+              <DishCard width="250px" :dishInfo="dish" />
+            </v-col>
           </v-row>
         </div>
       </div>

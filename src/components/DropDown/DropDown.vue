@@ -5,7 +5,7 @@
     :loading="loading"
     :disabled="disabled"
     :label="label"
-    :items="items"
+    :items="options"
     @change="changeSelect"
     background-color="#1f1d2b"
     solo
