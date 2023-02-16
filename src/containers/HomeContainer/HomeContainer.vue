@@ -2,7 +2,7 @@
   <div class="home-page">
     <v-row>
       <v-col md="7">
-        <MenuContainer />
+        <MenuContainer title="Jaegar Resto" date="Tuesday, 2 Feb 2021" />
       </v-col>
       <v-col md="5">
         <OrderContainer />

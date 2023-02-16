@@ -7,8 +7,8 @@ import DishCard from '../DishCard';
   components: { Input, DropDown, DishCard },
 })
 export default class MenuContainer extends Vue {
-  @Prop({ default: 'Jaegar Resto' }) readonly title: string;
-  @Prop({ default: 'Tuesday, 2 Feb 2021' }) readonly date: string;
+  @Prop({ default: '' }) readonly title: string;
+  @Prop({ default: '' }) readonly date: string;
 
   readonly menuItems: App.MenuBarItem[] = [
     {
