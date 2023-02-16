@@ -1,16 +1,14 @@
 <template>
-  <DashboardLayout>
-    <router-view />
-  </DashboardLayout>
+  <HomeContainer />
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import DashboardLayout from '@/layout';
+import { HomeContainer } from '@/containers/HomeContainer';
 
 @Component({
   components: {
-    DashboardLayout,
+    HomeContainer,
   },
 })
 export default class HomePage extends Vue {}
