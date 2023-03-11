@@ -12,33 +12,29 @@ export default class ConfirmDishCard extends Vue {
       //
     },
   })
-  readonly changeNoteQuantity: (dishId: number, note: string, quantity: number) => void;
+  readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
 
-  quantity = '1';
-  noteValue = '';
+  input: Dish.Input = {
+    quantity: 1,
+    note: '',
+  };
 
   get total(): number {
-    return Number((parseInt(this.quantity) * this.dishOrder.price).toFixed(2));
+    return Number((this.input.quantity * this.dishOrder.price).toFixed(2));
   }
 
   onChangeNote(value: string): void {
-    this.noteValue = value;
-    if (this.changeNoteQuantity) {
-      this.changeNoteQuantity(this.dishOrder.id, this.noteValue, Number(this.quantity));
-    }
+    this.input.note = value;
+    this.changeNoteQuantity(this.dishOrder.id, this.input);
   }
 
-  onChangeQuantity(value: string): void {
-    this.quantity = value;
-    if (this.changeNoteQuantity) {
-      this.changeNoteQuantity(this.dishOrder.id, this.noteValue, Number(this.quantity));
-    }
+  onChangeQuantity(value: number): void {
+    this.input.quantity = value;
+    this.changeNoteQuantity(this.dishOrder.id, this.input);
   }
 
   clickBtn(): void {
-    if (this.onDelete) {
-      this.onDelete(this.dishOrder.id);
-    }
+    this.onDelete(this.dishOrder.id);
   }
 }
