@@ -25,7 +25,6 @@
         <div class="card__price--total">$ {{ total }}</div>
       </v-col>
     </v-row>
-
     <v-row class="card__confirm">
       <v-col md="10">
         <Input placeholder="Order Note..." :onChange="onChangeNote" solo />
