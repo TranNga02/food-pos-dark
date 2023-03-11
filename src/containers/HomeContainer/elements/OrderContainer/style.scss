@@ -1,3 +1,59 @@
 .order {
-  background: #1f1d2b;
+  padding: 24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding-bottom: 24px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+    border-bottom: 1px solid #393c49;
+  }
+
+  &__id {
+    font-size: 20px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__title {
+    margin-top: 0px;
+
+    p {
+      margin: 0px;
+    }
+  }
+
+  &__total {
+    margin: 10px 0px;
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      > :first-child {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #abbbc2;
+      }
+
+      > :last-child {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .btn--payment {
+    width: 100%;
+  }
 }
