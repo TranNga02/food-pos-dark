@@ -3,14 +3,9 @@ import { Vue, Prop, Component } from 'vue-property-decorator';
 @Component({})
 export default class DishCard extends Vue {
   @Prop({ required: true }) readonly dishInfo: Dish.DishInfo;
-  @Prop({}) readonly dishesOrder: Dish.DishOrder[];
-  @Prop({}) readonly className: string;
-  @Prop({
-    default: () => {
-      //
-    },
-  })
-  readonly onChangeDish: (dish: number) => void;
+  @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
+  @Prop({ required: false }) readonly className: string;
+  @Prop({ required: true }) readonly onChangeDish: (dish: number) => void;
 
   get classNames(): string {
     if (this.isActive) {
