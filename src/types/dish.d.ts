@@ -1,5 +1,6 @@
 declare namespace Dish {
   type DishInfo = {
+    id: number;
     src: string;
     name: string;
     price: number;
@@ -13,5 +14,15 @@ declare namespace Dish {
     grill: DishInfo[];
     appetizer: DishInfo[];
     dessert: DishInfo[];
+  };
+
+  type DishOrder = {
+    id: number;
+    src: string;
+    name: string;
+    price: number;
+    available: number;
+    quantity: number;
+    note: string;
   };
 }
