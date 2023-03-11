@@ -14,7 +14,8 @@ export default class HomeContainer extends Vue {
   dishesOrder: Dish.DishOrder[] = [];
 
   changeDishOrder(dishId: number): void {
-    if (this.dishesOrder.find(dish => dish.id === dishId)) {
+    const index = this.dishesOrder.findIndex(dish => dish.id === dishId);
+    if (index !== -1) {
       this.dishesOrder = this.dishesOrder.filter(dish => dish.id !== dishId);
     } else {
       this.dishesOrder.push(this.createDishOrder(dishId));
@@ -36,16 +37,10 @@ export default class HomeContainer extends Vue {
     };
   }
 
-  changeNote(dishId: number, note: string): void {
+  changeNoteQuantity(dishId: number, note: string, quantity: number): void {
     const index = this.dishesOrder.findIndex(dish => dish.id === dishId);
     if (index !== -1) {
       this.dishesOrder[index].note = note;
-    }
-  }
-
-  changeQuantity(dishId: number, quantity: number): void {
-    const index = this.dishesOrder.findIndex(dish => dish.id === dishId);
-    if (index !== -1) {
       this.dishesOrder[index].quantity = quantity;
     }
   }

@@ -16,8 +16,7 @@
         :key="dish.id"
         :dishOrder="dish"
         :onDelete="onDelete"
-        :changeNote="changeNote"
-        :changeQuantity="changeQuantity"
+        :changeNoteQuantity="changeNoteQuantity"
       />
     </div>
 

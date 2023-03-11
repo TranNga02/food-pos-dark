@@ -34,7 +34,7 @@
     <div class="detail">
       <v-row>
         <v-col md="4" class="col-sm-4" v-for="dish in dishInfo" :key="dish.id">
-          <DishCard width="250px" :dishInfo="dish" :onChangeDish="changeDishOrder" :className="isActive(dish.id)" />
+          <DishCard width="250px" :dishInfo="dish" :onChangeDish="changeDishOrder" :dishesOrder="dishesOrder" />
         </v-col>
       </v-row>
     </div>

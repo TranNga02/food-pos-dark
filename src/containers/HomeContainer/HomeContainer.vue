@@ -17,8 +17,7 @@
           :tabOptions="dropdownItems"
           :dishesOrder="dishesOrder"
           :onDelete="changeDishOrder"
-          :changeNote="changeNote"
-          :changeQuantity="changeQuantity"
+          :changeNoteQuantity="changeNoteQuantity"
         />
       </v-col>
     </v-row>

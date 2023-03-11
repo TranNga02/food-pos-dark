@@ -12,19 +12,8 @@ export default class ConfirmDishCard extends Vue {
       //
     },
   })
-  readonly changeQuantity: (dishId: number, quantity: number) => void;
-  @Prop({
-    default: () => {
-      //
-    },
-  })
-  readonly changeNote: (dishId: number, note: string) => void;
-  @Prop({
-    default: () => {
-      //
-    },
-  })
-  readonly onDelete: (dishId: number) => void;
+  readonly changeNoteQuantity: (dishId: number, note: string, quantity: number) => void;
+  @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
 
   quantity = '1';
   noteValue = '';
@@ -35,15 +24,15 @@ export default class ConfirmDishCard extends Vue {
 
   onChangeNote(value: string): void {
     this.noteValue = value;
-    if (this.changeNote) {
-      this.changeNote(this.dishOrder.id, this.noteValue);
+    if (this.changeNoteQuantity) {
+      this.changeNoteQuantity(this.dishOrder.id, this.noteValue, Number(this.quantity));
     }
   }
 
   onChangeQuantity(value: string): void {
     this.quantity = value;
-    if (this.changeQuantity) {
-      this.changeQuantity(this.dishOrder.id, Number(this.quantity));
+    if (this.changeNoteQuantity) {
+      this.changeNoteQuantity(this.dishOrder.id, this.noteValue, Number(this.quantity));
     }
   }
 

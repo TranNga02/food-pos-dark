@@ -43,13 +43,6 @@ export default class MenuContainer extends Vue {
     }
   }
 
-  isActive(dishId: number): string {
-    if (this.dishesOrder.find(dish => dish.id === dishId)) {
-      return 'active';
-    }
-    return '';
-  }
-
   changeSelect(value: string): void {
     this.selectValue = value;
   }

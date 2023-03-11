@@ -1,5 +1,5 @@
 <template>
-  <div :class="classNames" @click="onClick">
+  <div :class="classNames" @click="onClickCard">
     <div class="card">
       <div class="image">
         <img :src="require(`@/assets/images/${dishInfo.src}`)" width="130px" />
