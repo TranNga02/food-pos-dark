@@ -25,4 +25,9 @@ declare namespace Dish {
     quantity: number;
     note: string;
   };
+
+  type Input = {
+    quantity: number;
+    note: string;
+  };
 }
