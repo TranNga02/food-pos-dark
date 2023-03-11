@@ -1,7 +1,7 @@
 <template>
   <div class="order">
     <div class="order__header">
-      <p class="order__id">{{ title }}</p>
+      <p class="order__id">Order #{{ orderId }}</p>
       <Tabs :options="tabOptions" :onChange="changeSelect" :value="selectValue" />
       <v-row class="order__title">
         <v-col md="8"><p>Item</p></v-col>
@@ -9,7 +9,6 @@
         <v-col md="2"><p>Price</p></v-col>
       </v-row>
     </div>
-
     <div class="order__content">
       <ConfirmDishCard
         v-for="dish in dishesOrder"
@@ -19,7 +18,6 @@
         :changeNoteQuantity="changeNoteQuantity"
       />
     </div>
-
     <div class="order__footer">
       <div class="order__total">
         <div>

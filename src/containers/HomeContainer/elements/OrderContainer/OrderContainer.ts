@@ -7,15 +7,10 @@ import ConfirmDishCard from '../ConfirmDishCard';
   components: { Tabs, ConfirmDishCard, Button },
 })
 export default class OrderContainer extends Vue {
-  @Prop({ default: 'Orders #34562' }) readonly title: string;
-  @Prop({}) readonly tabOptions: App.Option[];
-  @Prop({}) readonly dishesOrder: Dish.DishOrder[];
-  @Prop({
-    default: () => {
-      //
-    },
-  })
-  readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
+  @Prop({ default: '' }) readonly orderId: string;
+  @Prop({ required: true }) readonly tabOptions: App.Option[];
+  @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
+  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
 
   selectValue = '0';
