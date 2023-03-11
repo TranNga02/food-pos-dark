@@ -3,8 +3,8 @@
     <v-row>
       <v-col md="7">
         <MenuContainer
-          title="Jaegar Resto"
-          date="Tuesday, 2 Feb 2021"
+          :title="restoName"
+          :date="date"
           :dropdownItems="dropdownItems"
           :menuItems="menuItems"
           :listDishes="listDishes"
@@ -14,6 +14,7 @@
       </v-col>
       <v-col md="5">
         <OrderContainer
+          :orderId="orderId"
           :tabOptions="dropdownItems"
           :dishesOrder="dishesOrder"
           :onDelete="changeDishOrder"

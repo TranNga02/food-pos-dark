@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { listDishes, menuItems, dropdownItems } from '@/mockData/mockData';
+import { listDishes, menuItems, dropdownItems, restoName, orderId, date } from '@/mockData/mockData';
 import MenuContainer from './elements/MenuContainer';
 import OrderContainer from './elements/OrderContainer';
 
@@ -10,6 +10,9 @@ export default class HomeContainer extends Vue {
   readonly dropdownItems = dropdownItems;
   readonly menuItems = menuItems;
   readonly listDishes = listDishes;
+  readonly restoName = restoName;
+  readonly orderId = orderId;
+  readonly date = date;
 
   dishesOrder: Dish.DishOrder[] = [];
 
