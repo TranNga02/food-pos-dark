@@ -2,6 +2,9 @@
   padding: 10px 30px;
   background: #252836;
   min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   p {
     margin: 0px;
@@ -27,61 +30,62 @@
     }
   }
 
-  .content {
-    .navbar {
-      margin: 20px 0px;
+  .navbar {
+    margin: 20px 0px;
+    border-bottom: 1px solid #393c49;
 
-      .bt-group {
-        background-color: transparent;
-        border-radius: 0px;
+    .bt-group {
+      background-color: transparent;
+      border-radius: 0px;
 
-        button {
-          text-transform: unset;
-          padding: 0px 30px 10px 0px;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 140%;
-          border: 0px;
-          opacity: 1;
+      button {
+        text-transform: unset;
+        padding: 0px 30px 10px 0px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        border: 0px;
+        opacity: 1;
 
-          &:hover {
-            color: #ea7c69 !important;
-            &::before {
-              background-color: #252836;
-            }
+        &:hover {
+          color: #ea7c69 !important;
+          &::before {
+            background-color: #252836;
           }
+        }
 
-          &.v-btn--active {
-            color: #ea7c69 !important;
-            border-bottom: 3px solid #ea7c69 !important;
+        &.v-btn--active {
+          color: #ea7c69 !important;
 
-            &::before {
-              background-color: #252836;
-            }
+          &::before {
+            background-color: #252836;
+            border-bottom: 3px solid #ea7c69;
+            opacity: 1;
           }
         }
       }
     }
   }
 
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      color: #ffffff;
+    }
+  }
+
   .detail {
-    .detail-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      p {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 140%;
-        color: #ffffff;
-      }
-    }
-
-    .detail-content {
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 }
