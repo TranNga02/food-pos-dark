@@ -1,7 +1,7 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import Tabs from '@/components/Tabs';
-import ConfirmDishCard from '../ConfirmDishCard';
 import Button from '@/components/Button';
+import ConfirmDishCard from '../ConfirmDishCard';
 
 @Component({
   components: { Tabs, ConfirmDishCard, Button },
@@ -15,7 +15,7 @@ export default class OrderContainer extends Vue {
       //
     },
   })
-  readonly changeNoteQuantity: (dishId: number, note: string, quantity: number) => void;
+  readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
 
   selectValue = '0';
