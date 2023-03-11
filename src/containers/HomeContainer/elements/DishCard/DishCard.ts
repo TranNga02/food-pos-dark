@@ -20,16 +20,11 @@ export default class DishCard extends Vue {
   }
 
   get isActive(): boolean {
-    const index = this.dishesOrder.findIndex(dish => dish.id === this.dishInfo.id);
-    if (index != -1) {
-      return true;
-    }
-    return false;
+    const result = this.dishesOrder.find(dish => dish.id === this.dishInfo.id);
+    return !!result;
   }
 
   onClickCard(): void {
-    if (this.onChangeDish) {
-      this.onChangeDish(this.dishInfo.id);
-    }
+    this.onChangeDish(this.dishInfo.id);
   }
 }
