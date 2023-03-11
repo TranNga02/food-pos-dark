@@ -1,3 +1,7 @@
+export const restoName = 'Jaegar Resto';
+export const date = 'Tuesday, 2 Feb 2021';
+export const orderId = 34562;
+
 export const menuItems: App.MenuBarItem[] = [
   {
     name: 'Hot Dishes',
