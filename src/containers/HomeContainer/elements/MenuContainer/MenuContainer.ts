@@ -9,16 +9,11 @@ import DishCard from '../DishCard';
 export default class MenuContainer extends Vue {
   @Prop({ default: '' }) readonly title: string;
   @Prop({ default: '' }) readonly date: string;
-  @Prop({}) readonly dropdownItems: App.Option[];
-  @Prop({}) readonly menuItems: App.MenuBarItem[];
-  @Prop({}) readonly listDishes: Dish.ListDishes;
-  @Prop({}) readonly dishesOrder: Dish.DishOrder[];
-  @Prop({
-    default: () => {
-      //
-    },
-  })
-  readonly changeDishOrder: (dishId: number) => void;
+  @Prop({ required: true }) readonly dropdownItems: App.Option[];
+  @Prop({ required: true }) readonly menuItems: App.MenuBarItem[];
+  @Prop({ required: true }) readonly listDishes: Dish.ListDishes;
+  @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
+  @Prop({ required: true }) readonly changeDishOrder: (dishId: number) => void;
 
   selectValue = '';
   menuValue = 0;

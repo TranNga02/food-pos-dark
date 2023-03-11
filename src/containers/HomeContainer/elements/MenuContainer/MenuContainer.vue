@@ -30,7 +30,6 @@
         <DropDown :options="dropdownItems" :value="selectValue" label="Order Type" :onChange="changeSelect" />
       </div>
     </div>
-
     <div class="detail">
       <v-row>
         <v-col md="4" class="col-sm-4" v-for="dish in dishInfo" :key="dish.id">
