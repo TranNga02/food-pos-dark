@@ -1,0 +1,21 @@
+.v-tab {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: unset;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  margin-right: 20px;
+  padding: 0px 10px;
+  min-width: fit-content;
+
+  &--active {
+    background-color: #ea7c69;
+    border: 0;
+    color: #ffffff;
+  }
+}
+
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) {
+  color: #ea7c69;
+}

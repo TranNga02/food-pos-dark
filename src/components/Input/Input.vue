@@ -9,6 +9,8 @@
     :disabled="disabled"
     :label="label"
     :placeholder="placeholder"
+    :min="1"
+    :max="max"
     v-model="inputValue"
     @input="changeInput"
     background-color="#2D303E"

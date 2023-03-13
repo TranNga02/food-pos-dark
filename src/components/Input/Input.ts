@@ -13,10 +13,11 @@ export default class Input extends Vue {
   @Prop({ required: false }) readonly value: string;
   @Prop({ required: false }) readonly icon: string;
   @Prop({ default: false }) readonly solo: boolean;
+  @Prop({ required: false }) readonly max: number;
   @Prop({
     default: InputType.TEXT,
     validator(value: InputType) {
-      return [InputType.TEXT, InputType.TEXTAREA, InputType.PASSWORD].includes(value);
+      return [InputType.TEXT, InputType.NUMBER, InputType.TEXTAREA, InputType.PASSWORD].includes(value);
     },
   })
   readonly type: string;

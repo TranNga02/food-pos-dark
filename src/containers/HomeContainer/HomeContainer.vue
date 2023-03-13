@@ -2,10 +2,24 @@
   <div class="home-page">
     <v-row>
       <v-col md="7">
-        <MenuContainer title="Jaegar Resto" date="Tuesday, 2 Feb 2021" />
+        <MenuContainer
+          :title="restoName"
+          :date="date"
+          :dropdownItems="dropdownItems"
+          :menuItems="menuItems"
+          :listDishes="listDishes"
+          :dishesOrder="dishesOrder"
+          :changeDishOrder="changeDishOrder"
+        />
       </v-col>
       <v-col md="5">
-        <OrderContainer />
+        <OrderContainer
+          :orderId="orderId"
+          :tabOptions="dropdownItems"
+          :dishesOrder="dishesOrder"
+          :onDelete="changeDishOrder"
+          :changeNoteQuantity="changeNoteQuantity"
+        />
       </v-col>
     </v-row>
   </div>
