@@ -12,7 +12,7 @@ export default class OrderContainer extends Vue {
   @Prop({ required: true }) readonly tabOptions: App.Option[];
   @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
   @Prop({ required: true }) readonly changeSelect: (value: string) => void;
-  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
+  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
   @Prop({ required: true }) readonly showPopUp: () => void;
 

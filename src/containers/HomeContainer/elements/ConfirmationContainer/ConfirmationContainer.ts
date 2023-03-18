@@ -9,7 +9,7 @@ import ConfirmDishCard from '../ConfirmDishCard';
 export default class ConfirmationContainer extends Vue {
   @Prop({ default: '' }) readonly orderId: string;
   @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
-  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
+  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
   @Prop({ required: true }) readonly showPopUp: () => void;
 

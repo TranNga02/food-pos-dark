@@ -57,7 +57,7 @@ export default class HomeContainer extends Vue {
     };
   }
 
-  changeNoteQuantity(dishId: number, input: Dish.Input): void {
+  changeNoteQuantity(dishId: number, input: Dish.DishOrderInfo): void {
     const index = this.dishesOrder.findIndex(dish => dish.id === dishId);
     if (index !== -1) {
       this.dishesOrder[index].note = input.note;

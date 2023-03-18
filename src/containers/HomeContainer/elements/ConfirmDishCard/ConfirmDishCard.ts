@@ -7,10 +7,10 @@ import Button from '@/components/Button';
 })
 export default class ConfirmDishCard extends Vue {
   @Prop({ required: true }) readonly dishOrder: Dish.DishOrder;
-  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.Input) => void;
+  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
 
-  dishOrderInfo: Dish.Input = {
+  dishOrderInfo: Dish.DishOrderInfo = {
     quantity: 1,
     note: '',
   };

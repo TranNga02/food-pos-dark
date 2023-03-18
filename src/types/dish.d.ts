@@ -26,7 +26,7 @@ declare namespace Dish {
     note: string;
   };
 
-  type Input = {
+  type DishOrderInfo = {
     quantity: number;
     note: string;
   };
