@@ -7,8 +7,8 @@ import FontIcon from '@/components/FontIcon';
 export default class PaymentMethod extends Vue {
   @Prop({ default: false }) readonly disabled: boolean;
   @Prop({ required: false }) readonly value: string;
-  @Prop({}) readonly paymentMethods: Payment.PaymentMethod[];
-  @Prop({}) readonly className: string;
+  @Prop({ required: true }) readonly paymentMethods: Payment.PaymentMethod[];
+  @Prop({ required: false }) readonly className: string;
   @Prop({
     default: () => {
       //
