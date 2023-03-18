@@ -14,7 +14,7 @@ export default class OrderContainer extends Vue {
   @Prop({ required: true }) readonly changeSelect: (value: string) => void;
   @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
-  @Prop({ required: true }) readonly showPopUp: () => void;
+  @Prop({ required: true }) readonly togglePopup: () => void;
 
   subTotal = 0;
   discount = 0;

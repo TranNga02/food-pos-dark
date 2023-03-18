@@ -21,13 +21,13 @@
           :dishesOrder="dishesOrder"
           :onDelete="changeDishOrder"
           :changeNoteQuantity="changeNoteQuantity"
-          :showPopUp="showPopUp"
+          :togglePopup="togglePopup"
           :selectValue="selectValue"
           :changeSelect="changeSelect"
         />
       </v-col>
     </v-row>
-    <v-row class="pop-up" v-if="popUp">
+    <v-row class="pop-up" v-if="isShowPopup">
       <v-col md="4"></v-col>
       <v-col md="4">
         <ConfirmationContainer
@@ -35,7 +35,7 @@
           :onDelete="changeDishOrder"
           :changeNoteQuantity="changeNoteQuantity"
           :orderId="orderId"
-          :showPopUp="showPopUp"
+          :togglePopup="togglePopup"
         />
       </v-col>
       <v-col md="4">
@@ -43,7 +43,7 @@
           :dropdownItems="dropdownItems"
           :paymentInfo="paymentInfo"
           :paymentMethods="paymentMethods"
-          :showPopUp="showPopUp"
+          :togglePopup="togglePopup"
           :selectValue="selectValue"
           :changeSelect="changeSelect"
           :numberPayment="numberPayment"

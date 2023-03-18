@@ -1,11 +1,11 @@
 <template>
   <div class="payment">
     <div class="payment__header">
-      <p class="payment__header--title">Payment</p>
-      <p class="payment__header--number">{{ numberPayment }} payment method available</p>
+      <p class="payment__header__title">Payment</p>
+      <p class="payment__header__number">{{ numberPayment }} payment method available</p>
     </div>
     <div class="payment__method">
-      <p class="payment__method--title">Payment method</p>
+      <p class="payment__method__title">Payment method</p>
       <PaymentMethod :onChange="changeSelect" :value="selectValue" :paymentMethods="paymentMethods" />
       <Input placeholder="Enter Cardholder Name..." label="Cardholder Name" :value="paymentInfo.name" />
       <Input placeholder="Enter Card Number..." label="Card Number" :value="paymentInfo.number" />
@@ -30,14 +30,14 @@
         </v-col>
         <v-col md="6">
           <p>Table no.</p>
-          <Input placeholder="Enter Table no..." solo />
+          <Input placeholder="Enter Table no..." :solo="true" />
         </v-col>
       </v-row>
     </div>
     <div class="payment__footer">
       <v-row>
         <v-col md="6">
-          <Button label="Cancel" variant="primary" plain :onClick="showPopUp" block />
+          <Button label="Cancel" variant="primary" plain :onClick="togglePopup" block />
         </v-col>
         <v-col md="6">
           <Button label="Confirm Payment" variant="primary" block />

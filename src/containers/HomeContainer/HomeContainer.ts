@@ -30,7 +30,7 @@ export default class HomeContainer extends Vue {
   readonly numberPayment = numberPayment;
 
   dishesOrder: Dish.DishOrder[] = [];
-  popUp = false;
+  isShowPopup = false;
   selectValue = '0';
 
   changeDishOrder(dishId: number): void {
@@ -65,8 +65,8 @@ export default class HomeContainer extends Vue {
     }
   }
 
-  showPopUp(): void {
-    this.popUp = !this.popUp;
+  togglePopup(): void {
+    this.isShowPopup = !this.isShowPopup;
   }
 
   changeSelect(value: string): void {

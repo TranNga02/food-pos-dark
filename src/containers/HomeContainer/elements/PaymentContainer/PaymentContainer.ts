@@ -13,6 +13,6 @@ export default class PaymentContainer extends Vue {
   @Prop({ required: true }) readonly dropdownItems: App.Option[];
   @Prop({ required: true }) readonly paymentInfo: Payment.CreditCardInfo;
   @Prop({ required: true }) readonly paymentMethods: Payment.PaymentMethod[];
-  @Prop({ required: true }) readonly showPopUp: () => void;
+  @Prop({ required: true }) readonly togglePopup: () => void;
   @Prop({ required: true }) readonly changeSelect: (value: string) => void;
 }

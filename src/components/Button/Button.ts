@@ -40,9 +40,6 @@ export default class Button extends Vue {
   }
 
   get width(): string {
-    if (this.label) {
-      return '';
-    }
-    return '48px';
+    return this.label ? '' : '48px';
   }
 }

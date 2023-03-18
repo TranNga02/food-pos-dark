@@ -11,7 +11,7 @@ export default class ConfirmationContainer extends Vue {
   @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
   @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
-  @Prop({ required: true }) readonly showPopUp: () => void;
+  @Prop({ required: true }) readonly togglePopup: () => void;
 
   subTotal = 0;
   discount = 0;

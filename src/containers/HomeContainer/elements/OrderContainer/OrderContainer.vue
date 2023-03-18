@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="order__btn--payment">
-        <Button label="Continue to Payment" variant="primary" :onClick="showPopUp" block />
+        <Button label="Continue to Payment" variant="primary" :onClick="togglePopup" block />
       </div>
     </div>
   </div>

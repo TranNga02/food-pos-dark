@@ -1,10 +1,10 @@
 <template>
   <div class="confirmation">
-    <FontIcon name="back" color="#ffffff" :size="20" :onClick="showPopUp" />
+    <FontIcon name="back" color="#ffffff" :size="20" :onClick="togglePopup" />
     <div class="confirmation__header">
       <div>
-        <p class="confirmation__header--title">Confirmation</p>
-        <p class="confirmation__header--id">Order #{{ orderId }}</p>
+        <p class="confirmation__header__title">Confirmation</p>
+        <p class="confirmation__header__id">Order #{{ orderId }}</p>
       </div>
       <Button variant="primary" icon="add" iconColor="#fafafa" />
     </div>
