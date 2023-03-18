@@ -38,4 +38,4 @@
 
 <script lang="ts" src="./ConfirmDishCard.ts"></script>
 
-<style scoped lang="scss" src="./style.scss"></style>
+<style lang="scss" src="./style.scss"></style>
