@@ -1,6 +1,29 @@
 export const restoName = 'Jaegar Resto';
 export const date = 'Tuesday, 2 Feb 2021';
 export const orderId = 34562;
+export const numberPayment = 3;
+
+export const paymentInfo: Payment.CreditCardInfo = {
+  name: 'Levi Ackerman',
+  number: '2564 1421 0897 1244',
+  expirationDate: '02/2022',
+  cvv: '123',
+};
+
+export const paymentMethods: Payment.PaymentMethod[] = [
+  {
+    name: 'Credit Card',
+    icon: 'card',
+  },
+  {
+    name: 'Paypal',
+    icon: 'paypal',
+  },
+  {
+    name: 'Cash',
+    icon: 'wallet',
+  },
+];
 
 export const menuItems: App.MenuBarItem[] = [
   {
