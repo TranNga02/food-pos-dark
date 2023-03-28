@@ -19,7 +19,6 @@
       </v-row>
       <v-row>
         <v-col md="6">
-          <p>Order Type</p>
           <DropDown
             :options="dropdownItems"
             :value="selectValue"
@@ -29,8 +28,7 @@
           />
         </v-col>
         <v-col md="6">
-          <p>Table no.</p>
-          <Input placeholder="Enter Table no..." :solo="true" />
+          <Input placeholder="Enter Table no..." label="Table no." />
         </v-col>
       </v-row>
     </div>
