@@ -12,7 +12,7 @@ export default class Input extends Vue {
   @Prop({ required: false }) readonly placeholder: string;
   @Prop({ required: false }) readonly value: string;
   @Prop({ required: false }) readonly icon: string;
-  @Prop({ default: false }) readonly solo: boolean;
+  @Prop(Boolean) readonly solo: boolean;
   @Prop({ required: false }) readonly max: number;
   @Prop({
     default: InputType.TEXT,

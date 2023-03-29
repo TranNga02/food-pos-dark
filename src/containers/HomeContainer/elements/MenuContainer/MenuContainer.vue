@@ -6,7 +6,7 @@
         <p class="date">{{ date }}</p>
       </div>
       <div>
-        <Input placeholder="Search for food, coffee, etc.." :onChange="changeSearch" icon="search" :solo="true" />
+        <Input placeholder="Search for food, coffee, etc.." :onChange="changeSearch" icon="search" solo />
       </div>
     </div>
     <div class="navbar">

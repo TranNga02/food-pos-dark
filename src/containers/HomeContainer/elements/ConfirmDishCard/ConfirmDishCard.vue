@@ -17,7 +17,7 @@
             :onChange="onChangeQuantity"
             type="number"
             :max="dishOrder.available"
-            :solo="true"
+            solo
           />
         </div>
       </v-col>
@@ -27,7 +27,7 @@
     </v-row>
     <v-row class="card__confirm">
       <v-col md="10">
-        <Input placeholder="Order Note..." :onChange="onChangeNote" :solo="true" />
+        <Input placeholder="Order Note..." :onChange="onChangeNote" solo />
       </v-col>
       <v-col md="2">
         <Button icon="trash" plain :onClick="clickBtn"></Button>
