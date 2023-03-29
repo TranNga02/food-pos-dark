@@ -1,11 +1,18 @@
 .base-input {
   padding-top: 30px;
 
+  &.solo {
+    input {
+      padding: 0px;
+    }
+  }
+
   input {
     color: #e0e6e9 !important;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
+    padding-left: 12px;
 
     &::placeholder {
       color: #abbbc2 !important;
@@ -24,5 +31,11 @@
     border: 1px solid #393c49;
     border-radius: 8px;
     height: 48px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }

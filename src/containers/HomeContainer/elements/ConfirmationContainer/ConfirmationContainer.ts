@@ -1,17 +1,14 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import Tabs from '@/components/Tabs';
 import Button from '@/components/Button';
+import FontIcon from '@/components/FontIcon';
 import ConfirmDishCard from '../ConfirmDishCard';
 
 @Component({
-  components: { Tabs, ConfirmDishCard, Button },
+  components: { ConfirmDishCard, Button, FontIcon },
 })
-export default class OrderContainer extends Vue {
+export default class ConfirmationContainer extends Vue {
   @Prop({ default: '' }) readonly orderId: string;
-  @Prop({ required: true }) readonly selectValue: string;
-  @Prop({ required: true }) readonly tabOptions: App.Option[];
   @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
-  @Prop({ required: true }) readonly changeSelect: (value: string) => void;
   @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
   @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
   @Prop({ required: true }) readonly togglePopup: () => void;

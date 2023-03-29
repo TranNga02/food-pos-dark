@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?278msx');
-  src: url('../fonts/icomoon.eot?278msx#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?278msx') format('truetype'), url('../fonts/icomoon.woff?278msx') format('woff'),
-    url('../fonts/icomoon.svg?278msx#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?b3bkal');
+  src: url('../fonts/icomoon.eot?b3bkal#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?b3bkal') format('truetype'), url('../fonts/icomoon.woff?b3bkal') format('woff'),
+    url('../fonts/icomoon.svg?b3bkal#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -111,4 +111,7 @@
 }
 .icon-wallet:before {
   content: '\e91c';
+}
+.icon-checkmark-circle:before {
+  content: '\e91d';
 }

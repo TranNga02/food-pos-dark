@@ -10,6 +10,7 @@ export default class Button extends Vue {
   @Prop({ default: false }) readonly loading: boolean;
   @Prop({ default: false }) readonly disabled: boolean;
   @Prop({ default: false }) readonly plain: boolean;
+  @Prop({ default: false }) readonly block: boolean;
   @Prop({ required: false }) readonly variant: string;
   @Prop({ required: false }) readonly icon: string;
   @Prop({ default: '#EA7C69' }) readonly iconColor: string;
@@ -36,5 +37,9 @@ export default class Button extends Vue {
 
   get classNames(): string {
     return `btn ${this.className || ''}`;
+  }
+
+  get width(): string {
+    return this.label ? '' : '48px';
   }
 }

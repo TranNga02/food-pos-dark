@@ -1,25 +1,27 @@
 <template>
-  <v-navigation-drawer class="side-bar" :width="90" color="#1f1d2b" permanent>
-    <v-list-item class="item">
-      <v-list-item-icon class="logo">
+  <div class="side-bar">
+    <div class="side-bar__logo">
+      <div class="icon-button icon-button__logo">
         <FontIcon name="logo" :size="40" />
-      </v-list-item-icon>
-    </v-list-item>
-    <v-list>
-      <v-list-item v-for="item in items" class="item" :key="item.icon">
-        <router-link :to="item.path" class="nav-link">
-          <v-list-item-icon class="icon-button">
-            <FontIcon :name="item.icon" />
-          </v-list-item-icon>
-        </router-link>
-      </v-list-item>
-    </v-list>
-    <v-list-item class="item">
-      <v-list-item-icon class="icon-button">
+      </div>
+    </div>
+    <div class="side-bar__items">
+      <ul>
+        <li v-for="item in items" class="item" :key="item.icon">
+          <router-link :to="item.path">
+            <div class="icon-button icon-button__item">
+              <FontIcon :name="item.icon" />
+            </div>
+          </router-link>
+        </li>
+      </ul>
+    </div>
+    <div class="side-bar__log-out">
+      <div class="icon-button icon-button__log-out">
         <FontIcon name="log-out" />
-      </v-list-item-icon>
-    </v-list-item>
-  </v-navigation-drawer>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" src="./SideBar.ts"></script>

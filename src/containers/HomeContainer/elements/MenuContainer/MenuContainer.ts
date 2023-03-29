@@ -9,13 +9,14 @@ import DishCard from '../DishCard';
 export default class MenuContainer extends Vue {
   @Prop({ default: '' }) readonly title: string;
   @Prop({ default: '' }) readonly date: string;
+  @Prop({ required: true }) readonly selectValue: string;
   @Prop({ required: true }) readonly dropdownItems: App.Option[];
   @Prop({ required: true }) readonly menuItems: App.MenuBarItem[];
   @Prop({ required: true }) readonly listDishes: Dish.ListDishes;
   @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
   @Prop({ required: true }) readonly changeDishOrder: (dishId: number) => void;
+  @Prop({ required: true }) readonly changeSelect: (value: string) => void;
 
-  selectValue = '';
   menuValue = 0;
   searchValue = '';
 
@@ -36,10 +37,6 @@ export default class MenuContainer extends Vue {
       default:
         return this.listDishes.hotDishes;
     }
-  }
-
-  changeSelect(value: string): void {
-    this.selectValue = value;
   }
 
   changeSearch(value: string): void {

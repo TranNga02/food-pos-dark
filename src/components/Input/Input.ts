@@ -12,7 +12,7 @@ export default class Input extends Vue {
   @Prop({ required: false }) readonly placeholder: string;
   @Prop({ required: false }) readonly value: string;
   @Prop({ required: false }) readonly icon: string;
-  @Prop({ default: false }) readonly solo: boolean;
+  @Prop(Boolean) readonly solo: boolean;
   @Prop({ required: false }) readonly max: number;
   @Prop({
     default: InputType.TEXT,
@@ -32,7 +32,11 @@ export default class Input extends Vue {
   inputValue = '';
 
   get classNames(): string {
-    return `base-input ${this.className || ''}`;
+    let classNames = `base-input ${this.className || ''}`;
+    if (this.solo) {
+      classNames += 'solo';
+    }
+    return classNames;
   }
 
   created(): void {

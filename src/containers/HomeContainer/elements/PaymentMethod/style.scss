@@ -1,0 +1,42 @@
+.payment-method {
+  padding-top: 10px;
+  position: relative;
+
+  .icon-checkmark-circle {
+    display: none;
+  }
+
+  .v-tab {
+    border: 1px solid #393c49;
+    border-radius: 8px;
+    margin: 0px 10px 0px 0px;
+
+    .name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      color: #abbbc2;
+      text-transform: none;
+    }
+  }
+
+  .v-tab--active {
+    border: 1px solid #abbbc2;
+    background-color: #252836;
+
+    .name {
+      color: #ffffff;
+    }
+
+    .icon:not(.icon-checkmark-circle)::before {
+      color: #ffffff;
+    }
+
+    .icon-checkmark-circle {
+      display: inline;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}
