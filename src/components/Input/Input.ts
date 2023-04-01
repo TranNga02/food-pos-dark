@@ -34,7 +34,7 @@ export default class Input extends Vue {
   get classNames(): string {
     let classNames = `base-input ${this.className || ''}`;
     if (this.solo) {
-      classNames += 'solo';
+      classNames += ' solo';
     }
     return classNames;
   }
