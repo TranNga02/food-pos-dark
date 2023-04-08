@@ -2,7 +2,7 @@
   <div class="order">
     <div class="order__header">
       <p class="order__id">Order #{{ orderId }}</p>
-      <Tabs :options="tabOptions" :onChange="changeSelect" :value="selectValue" />
+      <Tabs :options="tabOptions" :onChange="changeOrderType" :value="orderType" />
       <v-row class="order__title">
         <v-col md="8"><p>Item</p></v-col>
         <v-col md="2"><p>Qty</p></v-col>
@@ -11,9 +11,9 @@
     </div>
     <div class="order__content">
       <ConfirmDishCard
-        v-for="dish in dishesOrder"
-        :key="dish.id"
-        :dishOrder="dish"
+        v-for="product in productOrderInfo"
+        :key="product.info.id"
+        :productOrderInfo="product"
         :onDelete="onDelete"
         :changeNoteQuantity="changeNoteQuantity"
       />
@@ -26,7 +26,7 @@
         </div>
         <div>
           <p>Sub total</p>
-          <p>$ {{ getSubTotal }}</p>
+          <p>$ {{ subTotal }}</p>
         </div>
       </div>
       <div class="order__btn--payment">

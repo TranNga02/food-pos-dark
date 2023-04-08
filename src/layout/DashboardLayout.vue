@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-layout">
-    <SideBar />
+    <SideBar :logOut="onLogOut" />
     <div class="content">
       <slot />
     </div>
