@@ -1,15 +1,7 @@
 import { Component, Vue } from 'vue-property-decorator';
-import {
-  listDishes,
-  menuItems,
-  dropdownItems,
-  restoName,
-  orderId,
-  date,
-  paymentInfo,
-  paymentMethods,
-  numberPayment,
-} from '@/mockData/mockData';
+import { dropdownItems, orderId, paymentInfo, paymentMethods } from '@/mockData/mockData';
+import { getCategories, getProducts, postOrder } from '@/api/call';
+import { getAccountInfo } from '@/api/auth';
 import MenuContainer from './elements/MenuContainer';
 import OrderContainer from './elements/OrderContainer';
 import ConfirmationContainer from './elements/ConfirmationContainer';
@@ -20,48 +12,70 @@ import PaymentContainer from './elements/PaymentContainer';
 })
 export default class HomeContainer extends Vue {
   readonly dropdownItems = dropdownItems;
-  readonly menuItems = menuItems;
-  readonly listDishes = listDishes;
-  readonly restoName = restoName;
   readonly orderId = orderId;
-  readonly date = date;
   readonly paymentInfo = paymentInfo;
   readonly paymentMethods = paymentMethods;
-  readonly numberPayment = numberPayment;
 
-  dishesOrder: Dish.DishOrder[] = [];
+  productOrderInfo: Product.ProductOrderInfo[] = [];
+  listProduct: Product.ListProducts = null;
+  menuCategory: Category.CategoryInfo[] = [];
   isShowPopup = false;
-  selectValue = '0';
+  orderType = '0';
+  paymentMethod = '0';
+  discount = 0;
 
-  changeDishOrder(dishId: number): void {
-    const index = this.dishesOrder.findIndex(dish => dish.id === dishId);
+  async created(): Promise<void> {
+    await getAccountInfo();
+    this.menuCategory = (await getCategories()).items;
+    this.listProduct = this.getListProduct((await getProducts()).items);
+  }
+
+  get getSubTotal(): number {
+    let subTotal = 0;
+    for (const product of this.productOrderInfo) {
+      subTotal += product.info.price * product.quantity;
+    }
+    subTotal -= this.discount;
+    return Number(subTotal.toFixed(2));
+  }
+
+  getListProduct(listProduct: Product.ProductInfo[]): Product.ListProducts {
+    const listProductArranged: Product.ListProducts = {};
+    if (this.menuCategory) {
+      listProduct.forEach(product => {
+        if (!listProductArranged[product.category_id]) {
+          listProductArranged[product.category_id] = [];
+        }
+        listProductArranged[product.category_id].push(product);
+      });
+    }
+    return listProductArranged;
+  }
+
+  changeProductOrder(productId: string): void {
+    const index = this.productOrderInfo.findIndex(product => product.info.id === productId);
     if (index !== -1) {
-      this.dishesOrder = this.dishesOrder.filter(dish => dish.id !== dishId);
+      this.productOrderInfo = this.productOrderInfo.filter(product => product.info.id !== productId);
     } else {
-      this.dishesOrder.push(this.createDishOrder(dishId));
+      this.productOrderInfo.push(this.createProductOrder(productId));
     }
   }
 
-  createDishOrder(dishId: number): Dish.DishOrder {
-    const dish: Dish.DishInfo = Object.values(listDishes)
+  createProductOrder(productId: string): Product.ProductOrderInfo {
+    const product: Product.ProductInfo = Object.values(this.listProduct)
       .flat()
-      .find(dish => dish.id === dishId);
+      .find(product => product.id === productId);
     return {
-      id: dish.id,
-      src: dish.src,
-      name: dish.name,
-      price: dish.price,
-      available: dish.available,
+      info: product,
       quantity: 1,
-      note: '',
     };
   }
 
-  changeNoteQuantity(dishId: number, input: Dish.DishOrderInfo): void {
-    const index = this.dishesOrder.findIndex(dish => dish.id === dishId);
+  changeNoteQuantity(productId: string, quantity: string): void {
+    const index = this.productOrderInfo.findIndex(product => product.info.id === productId);
     if (index !== -1) {
-      this.dishesOrder[index].note = input.note;
-      this.dishesOrder[index].quantity = input.quantity;
+      // this.productOrder[index].note = input.note;
+      this.productOrderInfo[index].quantity = parseInt(quantity);
     }
   }
 
@@ -69,7 +83,49 @@ export default class HomeContainer extends Vue {
     this.isShowPopup = !this.isShowPopup;
   }
 
-  changeSelect(value: string): void {
-    this.selectValue = value;
+  changeOrderType(value: string): void {
+    this.orderType = value;
+  }
+
+  changePaymentMethod(value: string): void {
+    this.paymentMethod = value;
+  }
+
+  async confirmPayment(): Promise<void> {
+    await postOrder(this.createOrder());
+    this.isShowPopup = false;
+    this.productOrderInfo = [];
+    alert('Order Successful!');
+  }
+
+  createOrder(): Order.OrderInfo {
+    const listProductOrder: Product.ProductOrder[] = [];
+
+    this.productOrderInfo.forEach(product => {
+      const productOrder: Product.ProductOrder = {
+        product_id: product.info.id,
+        quantity: product.quantity,
+        total: product.info.price * product.quantity,
+        price: product.info.price,
+      };
+      listProductOrder.push(productOrder);
+    });
+
+    return {
+      shop_id: sessionStorage.getItem('shop_id'),
+      payment_method: parseInt(this.paymentMethod),
+      sub_total: this.getSubTotal + this.discount,
+      total: this.getSubTotal,
+      code: '',
+      discount: 0,
+      currency: 1,
+      status: 1,
+      shipping_fee: 0,
+      member: this.paymentInfo.name,
+      email: '',
+      phone_number: '',
+      description: '',
+      items: listProductOrder,
+    };
   }
 }

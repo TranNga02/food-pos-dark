@@ -2,10 +2,10 @@ import { Vue, Prop, Component } from 'vue-property-decorator';
 
 @Component({})
 export default class DishCard extends Vue {
-  @Prop({ required: true }) readonly dishInfo: Dish.DishInfo;
-  @Prop({ required: true }) readonly dishesOrder: Dish.DishOrder[];
+  @Prop({ required: true }) readonly productInfo: Product.ProductInfo;
+  @Prop({ required: true }) readonly productOrderInfo: Product.ProductOrderInfo[];
   @Prop({ required: false }) readonly className: string;
-  @Prop({ required: true }) readonly onChangeDish: (dish: number) => void;
+  @Prop({ required: true }) readonly onChangeDish: (productId: string) => void;
 
   get classNames(): string {
     if (this.isActive) {
@@ -15,11 +15,11 @@ export default class DishCard extends Vue {
   }
 
   get isActive(): boolean {
-    const result = this.dishesOrder.find(dish => dish.id === this.dishInfo.id);
+    const result = this.productOrderInfo.find(product => product.info.id === this.productInfo.id);
     return !!result;
   }
 
   onClickCard(): void {
-    this.onChangeDish(this.dishInfo.id);
+    this.onChangeDish(this.productInfo.id);
   }
 }

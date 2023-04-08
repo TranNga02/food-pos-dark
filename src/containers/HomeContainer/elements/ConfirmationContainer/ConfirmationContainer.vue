@@ -10,9 +10,9 @@
     </div>
     <div class="confirmation__content">
       <ConfirmDishCard
-        v-for="dish in dishesOrder"
-        :key="dish.id"
-        :dishOrder="dish"
+        v-for="product in productOrderInfo"
+        :key="product.info.id"
+        :productOrderInfo="product"
         :onDelete="onDelete"
         :changeNoteQuantity="changeNoteQuantity"
       />
@@ -24,7 +24,7 @@
       </div>
       <div>
         <p>Sub total</p>
-        <p>$ {{ getSubTotal }}</p>
+        <p>$ {{ subTotal }}</p>
       </div>
     </div>
   </div>

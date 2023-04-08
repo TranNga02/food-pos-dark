@@ -6,30 +6,22 @@ import Button from '@/components/Button';
   components: { Input, Button },
 })
 export default class ConfirmDishCard extends Vue {
-  @Prop({ required: true }) readonly dishOrder: Dish.DishOrder;
-  @Prop({ required: true }) readonly changeNoteQuantity: (dishId: number, input: Dish.DishOrderInfo) => void;
-  @Prop({ required: true }) readonly onDelete: (dishId: number) => void;
+  @Prop({ required: true }) readonly productOrderInfo: Product.ProductOrderInfo;
+  @Prop({ required: true }) readonly changeNoteQuantity: (productId: string, quantity: string) => void;
+  @Prop({ required: true }) readonly onDelete: (product: string) => void;
 
-  dishOrderInfo: Dish.DishOrderInfo = {
-    quantity: 1,
-    note: '',
-  };
+  quantity = 1;
 
   get total(): number {
-    return Number((this.dishOrderInfo.quantity * this.dishOrder.price).toFixed(2));
+    return Number((this.productOrderInfo.quantity * this.productOrderInfo.info.price).toFixed(2));
   }
 
-  onChangeNote(value: string): void {
-    this.dishOrderInfo.note = value;
-    this.changeNoteQuantity(this.dishOrder.id, this.dishOrderInfo);
-  }
-
-  onChangeQuantity(value: number): void {
-    this.dishOrderInfo.quantity = value;
-    this.changeNoteQuantity(this.dishOrder.id, this.dishOrderInfo);
+  onChangeQuantity(value: string): void {
+    this.quantity = parseInt(value);
+    this.changeNoteQuantity(this.productOrderInfo.info.id, value);
   }
 
   clickBtn(): void {
-    this.onDelete(this.dishOrder.id);
+    this.onDelete(this.productOrderInfo.info.id);
   }
 }

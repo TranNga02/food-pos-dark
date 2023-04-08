@@ -3,27 +3,27 @@
     <v-row>
       <v-col md="8">
         <MenuContainer
-          :title="restoName"
-          :date="date"
           :dropdownItems="dropdownItems"
-          :menuItems="menuItems"
-          :listDishes="listDishes"
-          :dishesOrder="dishesOrder"
-          :changeDishOrder="changeDishOrder"
-          :selectValue="selectValue"
-          :changeSelect="changeSelect"
+          :menuCategory="menuCategory"
+          :productOrderInfo="productOrderInfo"
+          :listProduct="listProduct"
+          :orderType="orderType"
+          :changeProductOrder="changeProductOrder"
+          :changeOrderType="changeOrderType"
         />
       </v-col>
       <v-col md="4">
         <OrderContainer
           :orderId="orderId"
+          :subTotal="getSubTotal"
+          :discount="discount"
           :tabOptions="dropdownItems"
-          :dishesOrder="dishesOrder"
-          :onDelete="changeDishOrder"
+          :productOrderInfo="productOrderInfo"
+          :orderType="orderType"
+          :onDelete="changeProductOrder"
           :changeNoteQuantity="changeNoteQuantity"
           :togglePopup="togglePopup"
-          :selectValue="selectValue"
-          :changeSelect="changeSelect"
+          :changeOrderType="changeOrderType"
         />
       </v-col>
     </v-row>
@@ -31,10 +31,12 @@
       <v-col md="4"></v-col>
       <v-col md="4">
         <ConfirmationContainer
-          :dishesOrder="dishesOrder"
-          :onDelete="changeDishOrder"
-          :changeNoteQuantity="changeNoteQuantity"
           :orderId="orderId"
+          :subTotal="getSubTotal"
+          :discount="discount"
+          :productOrderInfo="productOrderInfo"
+          :onDelete="changeProductOrder"
+          :changeNoteQuantity="changeNoteQuantity"
           :togglePopup="togglePopup"
         />
       </v-col>
@@ -44,9 +46,11 @@
           :paymentInfo="paymentInfo"
           :paymentMethods="paymentMethods"
           :togglePopup="togglePopup"
-          :selectValue="selectValue"
-          :changeSelect="changeSelect"
-          :numberPayment="numberPayment"
+          :orderType="orderType"
+          :paymentMethod="paymentMethod"
+          :changeOrderType="changeOrderType"
+          :changePaymentMethod="changePaymentMethod"
+          :confirmPayment="confirmPayment"
         />
       </v-col>
     </v-row>

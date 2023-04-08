@@ -2,11 +2,11 @@
   <div class="payment">
     <div class="payment__header">
       <p class="payment__header__title">Payment</p>
-      <p class="payment__header__number">{{ numberPayment }} payment method available</p>
+      <p class="payment__header__number">{{ paymentMethods.length }} payment method available</p>
     </div>
     <div class="payment__method">
       <p class="payment__method__title">Payment method</p>
-      <PaymentMethod :onChange="changeSelect" :value="selectValue" :paymentMethods="paymentMethods" />
+      <PaymentMethod :onChange="changePaymentMethod" :value="paymentMethod" :paymentMethods="paymentMethods" />
       <Input placeholder="Enter Cardholder Name..." label="Cardholder Name" :value="paymentInfo.name" />
       <Input placeholder="Enter Card Number..." label="Card Number" :value="paymentInfo.number" />
       <v-row>
@@ -21,9 +21,9 @@
         <v-col md="6">
           <DropDown
             :options="dropdownItems"
-            :value="selectValue"
+            :value="orderType"
             label="Order Type"
-            :onChange="changeSelect"
+            :onChange="changeOrderType"
             className="dropdown--payment"
           />
         </v-col>
@@ -38,7 +38,7 @@
           <Button label="Cancel" variant="primary" plain :onClick="togglePopup" block />
         </v-col>
         <v-col md="6">
-          <Button label="Confirm Payment" variant="primary" block />
+          <Button label="Confirm Payment" variant="primary" block :onClick="confirmPayment" />
         </v-col>
       </v-row>
     </div>

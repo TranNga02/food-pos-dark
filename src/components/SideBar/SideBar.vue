@@ -17,7 +17,7 @@
       </ul>
     </div>
     <div class="side-bar__log-out">
-      <div class="icon-button icon-button__log-out">
+      <div class="icon-button icon-button__log-out" @click="logOut">
         <FontIcon name="log-out" />
       </div>
     </div>
